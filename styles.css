@@ -1,0 +1,228 @@
+
+      :root {
+      --yt-red: #e60000; /* slightly deeper red for stronger accents */
+      --bg: #ffffff;
+      --muted: #232425;
+      --surface: #ededed;
+      --text: #2d2f36;
+      --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+      --max-width: 1200px;
+      --gap-lg: 1.5rem;
+      --gap-md: 1rem;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; scroll-padding-top: 76px; } /* leave room for sticky navbar when jumping to anchors */
+      body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--surface);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+      }
+
+      /* NAV (YouTube-like) */
+      .navbar {
+      background: var(--bg);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+      padding: .6rem 0;
+      }
+      .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gap-lg);
+      }
+      .nav-logo { color: var(--yt-red); font-weight:800; font-size:1.15rem; text-decoration:none; display:flex; gap:.5rem; align-items:center; }
+      .nav-menu { list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center; flex-wrap:wrap; }
+      .nav-link { color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:6px; font-weight:600; }
+      .nav-link:hover { background:var(--surface); color:var(--text); }
+      .nav-link i { font-size:1rem; color:var(--yt-red); }
+
+      /* HERO — channel/header style with clearer hierarchy (red title, descriptive subtitle) */
+      .hero {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      }
+      .hero-content { max-width: var(--max-width); margin:0 auto; display:flex; align-items:center; gap:var(--gap-lg); padding:0 1rem; }
+      .hero-left { display:flex; flex-direction:column; gap:.35rem; }
+      .hero-title { font-size:1.75rem; font-weight:900; color:var(--yt-red); letter-spacing: -0.02em; }
+      .hero-subtitle { color:var(--muted); font-size:1rem; max-width:64ch; margin-top:.25rem; }
+
+      /* hero CTAs (secondary) — compact ghost buttons */
+      .hero-ctas { display:flex; gap:.6rem; align-items:center; margin-top:.6rem; flex-wrap:wrap; }
+      .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: .5rem .85rem;
+      border-radius: .45rem;
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      font-weight:700;
+      font-size:.95rem;
+      transition: transform .12s ease, background .12s ease, color .12s ease;
+      }
+      .btn-ghost i { color:var(--yt-red); } /* small red icon accent */
+      .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); color:var(--text); }
+
+      /* Sections and cards: stronger hierarchy via spacing, larger headings in red */
+      .card-body { background: var(--bg); border-radius:12px; box-shadow: var(--card-shadow); padding:2.75rem; max-width:1200px; margin:0 auto; }
+      .section { padding:2.5rem 1rem; }
+      .section h2 { color:var(--yt-red);font-weight:900; font-size:2rem; margin-bottom:1rem; }
+      .section h3 { color:var(--yt-red); font-size:1.5rem; margin-top:1rem; margin-bottom:.5rem; font-weight:800; margin-left: 0rem; }
+      .section h4 { color:var(--text); font-size:1.25rem; margin-top:1rem; margin-bottom:.5rem; font-weight:800;margin-left: 1rem;  }
+      .section p{ color:var(--muted); font-size:1rem; line-height:1.6; margin-bottom:.5rem; margin-left: 1rem; font-weight:450 !important}
+
+      .section-media { float:right; width:360px; margin:0 0 1rem 1.5rem; border-radius:10px; overflow:hidden; box-shadow:0 10px 30px rgba(16,24,40,0.06); }
+      .section-media img { width:100%; display:block; height:auto; }
+
+     /* Media figure: groups media with a shared visual indicator and caption */
+     .media-figure {
+       background: rgba(255,255,255,0.98);
+       border-left: 4px solid var(--yt-red);
+       padding: .5rem;
+       border-radius: 8px;
+       box-shadow: var(--card-shadow);
+       overflow: hidden;
+       display: block;
+     }
+     .media-figure img,
+     .media-figure .video-wrap { display:block; width:100%; border-radius:6px; }
+     .media-figure figcaption {
+       font-size: .92rem;
+       color: var(--muted);
+       padding-top: .5rem;
+       line-height: 1.35;
+     }
+     /* smaller caption tone for source/credit */
+     .media-figure .caption-meta { display:block; font-size:.82rem; color: #6b7280; margin-top:.25rem; }
+
+    /* Blockquote: concise definition of the backfire effect */
+    .citation-block {
+      background: #ffffff;
+      border-left: 4px solid var(--yt-red); /* accent */
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0 1.25rem 0;
+      color: var(--muted);
+      line-height: 1.4;
+
+      /* full width and clear floats so blockquote sits between paragraphs */
+      width: 100%;
+      box-sizing: border-box;
+      clear: both;
+    }
+    /* only the explicit citation text inside the blockquote is italic */
+    .citation-block .citation-text {
+      margin: 0;
+      color: #52555b;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 0.98rem;
+    }
+
+    /* keep citation links normal (not italic) and visually subtle */
+    .citation-link {
+      color: #b91c1c; /* muted red */
+      text-decoration: underline;
+      font-weight: 400;
+      font-style: normal;
+      padding: 1px 3px;
+      border-radius: 4px;
+      opacity: 0.92;
+    }
+    .citation-link:hover { background: #f8f2f2; color: #7f1d1d; }
+
+      .section + .section { margin-top:1.75rem; }
+
+      a.accent { color:var(--yt-red); text-decoration:none; font-weight:700; }
+
+      .subscribe { display:none !important; }
+
+      /* citation link / back-link styles */
+      /* make reference links less prominent (muted red, regular weight) */
+      .citation-link {
+      color: #b91c1c; /* muted red */
+      text-decoration: underline;
+      font-weight: 500; /* less bold */
+      padding: 1px 3px;
+      border-radius: 4px;
+      opacity: 0.92;
+      }
+      .citation-link:hover { background: #f8f2f2; color: #7f1d1d; }
+
+      .back-link {
+      font-size: 0.92rem;
+      margin-left: 0.5rem;
+      text-decoration: none;
+      color: #6b7280;
+      font-weight: 500;
+      opacity: 0.9;
+      }
+      .back-link:hover { color: #111827; opacity: 1; }
+
+      /* subtle numeric style for reference list */
+      .reference-number { display: none; }
+      ol.references {
+      list-style: decimal;
+      padding-left: 1.4rem;
+      margin: 0;
+      }
+      /* style the automatic list marker (numbers) */
+      ol.references li::marker {
+      color: #6b7280;
+      font-weight: 500;
+      font-size: 1rem;
+      }
+      ol.references li { margin-bottom: 0.8rem; }
+
+      /* responsive */
+      @media (max-width:992px) {
+      .section-media { width:300px; }
+      .hero-title { font-size:1.45rem; }
+      }
+      @media (max-width:768px) {
+      .nav-container { padding:0 .75rem; gap:.5rem; }
+      .hero-content { flex-direction:column; align-items:flex-start; gap:.6rem; }
+      .section-media { float:none; width:100%; margin:0 0 1rem 0; }
+      .hero-ctas { width:100%; }
+      .media-figure { border-left-width:3px; padding:.5rem; }
+      }
+
+      /* add responsive video wrapper so iframe has a real height */
+      .section-media .video-wrap {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+      margin-top: 1rem; /* keep your existing spacing */
+      }
+      .section-media .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      }
+
+      /* navbar responsive tweaks for collapse */
+      .navbar { padding: .45rem 0; }
+      .navbar-toggler { border: 0; color: var(--yt-red); background: transparent; font-size: 1.05rem; }
+      .navbar-toggler:focus { box-shadow: none; }
+      .nav-logo { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--yt-red); text-decoration:none; }
+      /* ensure collapsed menu looks like current nav */
+      .navbar-collapse .nav-menu { display:flex; flex-direction:column; gap:.5rem; padding: .5rem 0; }
+      .navbar-collapse .nav-item { list-style: none; }
+      .navbar-collapse .nav-link { display:flex; align-items:center; gap:.5rem; padding:.45rem .6rem; border-radius:6px; }
+      @media (min-width:768px) {
+      .navbar-collapse .nav-menu { flex-direction:row; align-items:center; gap:1rem; }
+      }
+   
