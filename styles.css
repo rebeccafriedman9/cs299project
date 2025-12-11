@@ -1,6 +1,7 @@
 
       :root {
-      --yt-red: #e60000; /* slightly deeper red for stronger accents */
+      --primary: #3c72d0;
+      --secondary:  #144496;
       --bg: #ffffff;
       --muted: #232425;
       --surface: #ededed;
@@ -39,21 +40,22 @@
       justify-content: space-between;
       gap: var(--gap-lg);
       }
-      .nav-logo { color: var(--yt-red); font-weight:800; font-size:1.15rem; text-decoration:none; display:flex; gap:.5rem; align-items:center; }
+      .nav-logo { color: var(--primary); font-weight:800; font-size:1.15rem; text-decoration:none; display:flex; gap:.5rem; align-items:center; }
       .nav-menu { list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center; flex-wrap:wrap; }
       .nav-link { color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:6px; font-weight:600; }
       .nav-link:hover { background:var(--surface); color:var(--text); }
-      .nav-link i { font-size:1rem; color:var(--yt-red); }
+      .nav-link i { font-size:1rem; color:var(primary); }
 
       /* HERO — channel/header style with clearer hierarchy (red title, descriptive subtitle) */
       .hero {
       background: var(--bg);
       padding: 2rem 1rem;
       border-bottom: 1px solid rgba(0,0,0,0.04);
+      height: 50vh;
       }
       .hero-content { max-width: var(--max-width); margin:0 auto; display:flex; align-items:center; gap:var(--gap-lg); padding:0 1rem; }
       .hero-left { display:flex; flex-direction:column; gap:.35rem; }
-      .hero-title { font-size:1.75rem; font-weight:900; color:var(--yt-red); letter-spacing: -0.02em; }
+      .hero-title { font-size:1.75rem; font-weight:900; color:var(--primary); letter-spacing: -0.02em; }
       .hero-subtitle { color:var(--muted); font-size:1rem; max-width:64ch; margin-top:.25rem; }
 
       /* hero CTAs (secondary) — compact ghost buttons */
@@ -71,14 +73,14 @@
       font-size:.95rem;
       transition: transform .12s ease, background .12s ease, color .12s ease;
       }
-      .btn-ghost i { color:var(--yt-red); } /* small red icon accent */
+      .btn-ghost i { color:var(--primary); } /* small red icon accent */
       .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); color:var(--text); }
 
       /* Sections and cards: stronger hierarchy via spacing, larger headings in red */
       .card-body { background: var(--bg); border-radius:12px; box-shadow: var(--card-shadow); padding:2.75rem; max-width:1200px; margin:0 auto; }
       .section { padding:2.5rem 1rem; }
-      .section h2 { color:var(--yt-red);font-weight:900; font-size:2rem; margin-bottom:1rem; }
-      .section h3 { color:var(--yt-red); font-size:1.5rem; margin-top:1rem; margin-bottom:.5rem; font-weight:800; margin-left: 0rem; }
+      .section h2 { color:var(--primary);font-weight:900; font-size:2rem; margin-bottom:1rem; }
+      .section h3 { color:var(--primary); font-size:1.5rem; margin-top:1rem; margin-bottom:.5rem; font-weight:800; margin-left: 0rem; }
       .section h4 { color:var(--text); font-size:1.25rem; margin-top:1rem; margin-bottom:.5rem; font-weight:800;margin-left: 1rem;  }
       .section p{ color:var(--muted); font-size:1rem; line-height:1.6; margin-bottom:.5rem; margin-left: 1rem; font-weight:450 !important}
 
@@ -88,7 +90,7 @@
      /* Media figure: groups media with a shared visual indicator and caption */
      .media-figure {
        background: rgba(255,255,255,0.98);
-       border-left: 4px solid var(--yt-red);
+       border-left: 4px solid var(--primary);
        padding: .5rem;
        border-radius: 8px;
        box-shadow: var(--card-shadow);
@@ -109,7 +111,7 @@
     /* Blockquote: concise definition of the backfire effect */
     .citation-block {
       background: #ffffff;
-      border-left: 4px solid var(--yt-red); /* accent */
+      border-left: 4px solid var(--primary); /* accent */
       padding: 1rem;
       border-radius: 6px;
       margin: 1rem 0 1.25rem 0;
@@ -132,7 +134,7 @@
 
     /* keep citation links normal (not italic) and visually subtle */
     .citation-link {
-      color: #b91c1c; /* muted red */
+      color: var(--secondary); 
       text-decoration: underline;
       font-weight: 400;
       font-style: normal;
@@ -144,14 +146,13 @@
 
       .section + .section { margin-top:1.75rem; }
 
-      a.accent { color:var(--yt-red); text-decoration:none; font-weight:700; }
+      a.accent { color:var(--primary); text-decoration:none; font-weight:700; }
 
       .subscribe { display:none !important; }
 
       /* citation link / back-link styles */
-      /* make reference links less prominent (muted red, regular weight) */
       .citation-link {
-      color: #b91c1c; /* muted red */
+      color: var(--secondary); 
       text-decoration: underline;
       font-weight: 500; /* less bold */
       padding: 1px 3px;
@@ -215,9 +216,9 @@
 
       /* navbar responsive tweaks for collapse */
       .navbar { padding: .45rem 0; }
-      .navbar-toggler { border: 0; color: var(--yt-red); background: transparent; font-size: 1.05rem; }
+      .navbar-toggler { border: 0; color: var(--primary); background: transparent; font-size: 1.05rem; }
       .navbar-toggler:focus { box-shadow: none; }
-      .nav-logo { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--yt-red); text-decoration:none; }
+      .nav-logo { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--primary); text-decoration:none; }
       /* ensure collapsed menu looks like current nav */
       .navbar-collapse .nav-menu { display:flex; flex-direction:column; gap:.5rem; padding: .5rem 0; }
       .navbar-collapse .nav-item { list-style: none; }
@@ -225,4 +226,8 @@
       @media (min-width:768px) {
       .navbar-collapse .nav-menu { flex-direction:row; align-items:center; gap:1rem; }
       }
-   
+   @media (max-width: 480px) {
+  .card-body {
+    padding: 1.25rem;
+  }
+}
