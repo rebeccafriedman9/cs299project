@@ -1,7 +1,8 @@
 
       :root {
       --primary: #3c72d0;
-      --secondary:  #144496;
+      --secondary:  #adc2e6;
+      --accentLight: #e0e7ff;
       --bg: #ffffff;
       --muted: #232425;
       --surface: #ededed;
@@ -26,7 +27,7 @@
       .navbar {
       background: var(--bg);
       border-bottom: 1px solid rgba(0,0,0,0.06);
-      position: sticky;
+      /* position: sticky; */
       top: 0;
       z-index: 1100;
       padding: .6rem 0;
@@ -124,7 +125,7 @@
       clear: both;
     }
     /* only the explicit citation text inside the blockquote is italic */
-    .citation-block .citation-text {
+    .citation-block {
       margin: 0;
       color: #52555b;
       font-weight: 400;
@@ -226,8 +227,114 @@
       @media (min-width:768px) {
       .navbar-collapse .nav-menu { flex-direction:row; align-items:center; gap:1rem; }
       }
-   @media (max-width: 480px) {
-  .card-body {
-    padding: 1.25rem;
-  }
+   
+
+
+      :root {
+  --primary: #3c72d0;
+  --secondary:  #144496;
+  --bg: #ffffff;
+  --muted: #232425;
+  --surface: #ededed;
+  --text: #2d2f36;
+  --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+  --max-width: 1200px;
+  --gap-lg: 1.5rem;
+  --gap-md: 1rem;
+
+  /* study-card accents mapped to site palette */
+  --accent1: #3c72d0;
+  --accent2: #144496;
+  --accent3: #6b7280;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  max-width: 70ch;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap-lg);
+}
+
+.card {
+  position: relative;
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 2rem;
+  /* overflow: hidden; */
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* perspective: 1200px; */
+      min-height: 260px;
+
+
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Faces */
+.card-face {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Front */
+.card-front {
+  background: var(--bg);
+}
+
+/* Back */
+.card-back {
+  background: var(--accentLight);
+  transform: rotateY(180deg);
+  text-align: center;
+}
+.card h4 {
+text-align: center;
+font-size: 1.25rem;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem; 
+  margin: 0 auto 1rem;
+  background: var(--accentLight);
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  .card { padding: 1.5rem; }
 }
