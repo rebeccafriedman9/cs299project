@@ -7,7 +7,7 @@
 
         --bg: #ffffff;
         --muted: #232425;
-        --surface: #e0e7ff;
+        --surface: #d6e4f1;
         --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
         --max-width: 1200px;
         --gap-lg: 1.5rem;
@@ -538,3 +538,59 @@
         #mainNav .nav-link i { font-size: 1.05rem; }
       }
       /*
+/* journal-like cards (placed under "The Knowledge Base") */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .6rem;
+  margin-top: .6rem;
+  align-items: start;
+}
+
+/* individual "journal" appearance */
+.journal-card {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border-radius: 8px;
+  padding: .9rem 1rem;
+  box-shadow: 0 8px 20px rgba(16,24,40,0.06);
+  border-left: 4px solid var(--primary);
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--accentDark);
+  transition: transform .15s ease, box-shadow .15s ease;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+/* journal title styling to read like a journal/cover */
+.journal-name {
+  font-size: 0.98rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* subtle hover lift like a paper card */
+.journal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(16,24,40,0.09);
+}
+
+/* optional small publisher / meta line if you add it later */
+.journal-meta {
+  display: block;
+  font-style: italic;
+  color: var(--muted);
+  font-size: .82rem;
+  margin-top: .25rem;
+}
+
+@media (max-width: 480px) {
+  .journal-grid { gap: .45rem; }
+  .journal-card { padding: .7rem .8rem; font-size: .95rem; }
+}
+
+a {
+  text-decoration: none;
+  color: var(--muted);
+}
