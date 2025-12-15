@@ -210,7 +210,43 @@ Overall, this project is especially relevant to Wellesley because the transition
     <section id="testing" class="section">
       <div class="card-body clearfix">
         <h2>Testing and Refinement</h2>
-        <p>Content about testing goes here...</p>
+      
+        <h3> Small Scale Internal Testing within our Team </h3>
+          <p>
+          We started by running the first draft of Study Buddy on ourselves. This was mostly a first pass for basic prompt issues. There were times when the bot wandered outside its scope or answered things when it was supposed to adhere to the refusal prompt. In addition, it invented citations out of nowhere.
+          One of the earliest problems we ran into was getting the bot to reliably refuse out of scope questions; it was quite inconsistent with it. We ended up having to rewrite the whole refusal section so the boundaries were bluntly clear. We also noticed that the game mode kept triggering even when no one actually wanted to play it, so we adjusted the rules so it only launched if the user explicitly asked for it. 
+        </p>
+        
+        <h3> Larger Scale Internal Testing within our Class </h3>
+          <p> 
+              Next, we had our classmates in CS 299 try out our study.
+In terms of the bot itself, based on their feedback and looking at their screenshots, two issues came up repeatedly: 
+
+          </p>
+<div class="citation-block">
+          <ol>
+<li> The game didn’t behave consistently and often generated only myths where the correct answer was false. 
+</li>
+<li>The bot mixed up citations, sometimes combining an author from one article with the title of another. Overall, it failed to cite properly.
+</li>
+</ol>
+</div>
+<p>
+  As talked about in the previous section Building the Gem, when we were building the knowledge base, we initially tried uploading 10 PDFs of some of our sources, but our topic was too broad for a limited amount of sources to cover all the myths we were testing. On top of that, the bot very frequently failed to cite properly when working from the PDF. After several rounds of troubleshooting and experimenting with different formats, we created a rule that the bot could only cite from specific cognitive and learning science journals. Once we tested that set up and saw that the bot consistently produced accurate and verifiable citations, we decided to stick with it. In addition, we told the bot that it had to admit when it couldn’t verify something in those journals and that pushed it to stop guessing. We also reworked both the myth-generation and the citation style several times. 
+In terms of the actual testing materials being sent out, we received feedback regarding adding questions to our surveys to measure change in belief and changing the measurements from 1-7 to 1-10, which we implemented.  
+
+</p>
+
+         <h3> User Testing with Wellesley First Years </h3>
+<p>
+Our final round involved ten first-years. In addition to our Professors Eni and Walsh spreading awareness, we requested the Dean of First Year Students at Wellesley to send out our interest form to all first-year students. Because she agreed, we assumed that every first-year on campus was made aware of the study and urged to participate. As an incentive, we also made sure to include that the participants who complete the study fully would be entered into a raffle to win one of two $15 Amazon gift cards. 
+We had over 30 users fill out our interest form, and to each, we privately sent out all of the study materials they required. These materials included an informed consent form, thorough instructions, a pre-survey, testing scenarios about the all-nighter myth and multitasking habits, a screenshot tutorial, a folder to upload screenshots, the Gem, a post survey, and a debriefing document. After sending out multiple email reminders, only 10 users fully completed the study. 
+</p>
+<p>
+From this group, we gathered both numbers and written comments. The quantitative part included ratings of engagement, difficulty, clarity of citations, how well the bot stayed on topic, and their overall experience. We also measured how their beliefs about certain study myths changed from before or after using the bot. 
+In the end, this whole process was very iterative. Every testing round exposed a different set of issues. We refined the bot and the testing materials a number of times. 
+</p>
+
       </div>
     </section>
 
@@ -218,7 +254,132 @@ Overall, this project is especially relevant to Wellesley because the transition
     <section id="results" class="section">
       <div class="card-body clearfix">
         <h2>Results</h2>
-        <p>Content about results goes here...</p>
+      
+<h3>Takeaways from Internal and Classroom Testing</h3>
+
+<p>
+From our own internal testing, it became obvious that the bot only behaved well when the rules were extremely explicit. Even small gaps or vague instructions led it to stretch its scope or reference sources that didn’t quite check out. When our classmates tested it, they noticed similar issues. They pointed out moments where the bot referenced outside sources and where the True/False game felt persistent and predictable. Together, these early rounds made it clear that if the bot wanted to be reliable, the prompt had to be much tighter than we initially expected.
+</p>
+
+<h4>What We Learned from First-Year Testing</h4>
+
+<p>
+Our results for first-year testing came from three main sources: the pre- and post-surveys and the screenshots. Altogether, looking at these pieces, we saw that Study Buddy does a solid job explaining study strategies and correcting misconceptions, but it is less effective at helping students actually use those strategies.
+</p>
+
+<h4>Quantitative Results</h4>
+
+<p>
+To track belief change, we asked participants to rate five statements about study habits on a 1–10 scale before and after using the chatbot.
+</p>
+
+<ul>
+  <li>I believe spacing out my studying over several days is more effective than cramming.</li>
+  <li>Multitasking helps me study and complete assignments more efficiently.</li>
+  <li>I believe taking short, structured breaks helps me focus and learn more effectively.</li>
+  <li>I believe testing myself (e.g., retrieval practice) improves my long-term learning.</li>
+  <li>I believe rereading my notes repeatedly is one of the best ways to learn.</li>
+</ul>
+
+<p>
+The slope charts below show how each individual’s beliefs changed over time.
+</p>
+
+<h5>Increased Belief in Effective Study Strategies</h5>
+
+<p>
+For Question 1 in the post-survey, most participants showed an increase after using our chatbot. Two participants stayed the same because they already started with a high belief in this strategy, and one participant showed a decrease.
+</p>
+
+<p>
+Question 3 showed a pretty similar pattern. Overall, the chatbot mainly strengthened participants’ beliefs in evidence-based strategies.
+</p>
+
+<h5>Decreased Belief in Ineffective Strategies</h5>
+
+<p>
+Questions 2 and 5 evaluated changes in beliefs about ineffective study strategies. For Question 2 about multitasking, four participants showed a decrease in belief after using our chatbot, which is exactly what we would hope to see. Five participants stayed constant because they already held very low belief in multitasking to begin with, and one participant showed a slight increase.
+</p>
+
+<p>
+Question 5, which refers to rereading notes, showed a decrease in belief from most participants. Our bot was decently effective at debunking common ineffective study strategies.
+</p>
+
+<h5>Differing Belief Changes in Effective Study Strategies</h5>
+
+<p>
+Question 4 addressed beliefs about retrieval practice, and the post-survey results showed a mixed pattern. This makes sense to us because retrieval practice is a more complex strategy, and students come in with different levels of understanding. Depending on what they already believed, the bot’s explanation might have clarified or shifted their view in different ways.
+</p>
+
+<p>
+In general, we noticed that the bot was more consistent at debunking ineffective strategies than boosting beliefs in effective ones, making its impact here more varied.
+</p>
+
+<h4>Results on Different Aspects of the Bot</h4>
+
+<h5>Where the Bot Performed Best</h5>
+
+<p>
+A few areas consistently stood out as strengths. Students agreed that the bot cited credible sources, stayed on topic, and was easy to use. Responses for all of these items were clustered heavily around “Agree” and “Strongly Agree,” which matched what we observed during testing. The bot rarely drifted outside its intended scope, and participants appreciated that it felt focused rather than scattered.
+</p>
+
+<h5>Where the Bot Struggled</h5>
+
+<p>
+Engagement was clearly the weakest area. The “Engaging/Interactive” item was the only one with noticeable disagreement responses, and users described the interaction as repetitive or overly formal. While overall experience ratings leaned positive, many participants selected “Neutral,” suggesting that the bot felt more adequate than compelling.
+</p>
+
+<h4>Qualitative Results</h4>
+
+<p>
+To better understand how students made sense of Study Buddy, we closely analyzed open-ended responses and screenshots and conducted multiple rounds of thematic coding. Six main themes emerged.
+</p>
+
+<h5>Efficiency</h5>
+<p>
+Many first-years emphasized that they value tools that save time and get straight to the point. Several users also appreciated how concise the chatbot’s responses were.
+</p>
+
+<h5>Source Validity and Trust</h5>
+<p>
+Students frequently mentioned that citations increased their trust in the bot. Restricting sources to specific cognitive and learning sciences journals made the information feel more trustworthy and credible.
+</p>
+
+<h5>Helpfulness for First-Years</h5>
+<p>
+Several students liked how Study Buddy paired them with Wellesley-specific PLTC resources.
+</p>
+
+<h5>Awareness Versus Action</h5>
+<p>
+One of the most important themes was the gap between knowing what works and actually doing it. Many students noted that they were already aware that certain study myths were false but still struggled to change their behavior. This highlights a key limitation of the current version of Study Buddy: it explains strategies well but does not help students follow through on them.
+</p>
+
+<h5>Is a Chatbot the Right Tool?</h5>
+<p>
+A smaller group raised broader concerns about using AI, including ethical and environmental considerations.
+</p>
+
+<h5>Logistical and Interaction Improvements</h5>
+<p>
+Finally, students offered specific logistical suggestions, such as making citations clickable and reducing how often the True/False game was prompted.
+</p>
+
+<h4>What Surprised Us</h4>
+
+<p>
+Some of these results were unexpected. We anticipated larger belief shifts overall, but many students already entered the study with fairly accurate views. In those cases, the chatbot confirmed existing knowledge rather than changing participants’ thinking.
+</p>
+
+<p>
+We were also surprised by how the True/False game was received. While we designed it to increase engagement, several users felt that it interrupted the flow of conversation or became repetitive, which reduced their interest in continuing.
+</p>
+
+<p>
+Finally, although our strict constraints succeeded in keeping the bot accurate and on topic, they also had the unintended effect of making the interaction feel flat and impersonal.
+</p>
+
+
       </div>
     </section>
 
