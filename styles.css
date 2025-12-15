@@ -1,83 +1,67 @@
 :root {
-      --primary: #3c72d0;
-      --secondary:  #adc2e6;
-      --accentLight: #e0e7ff;
-      --accentDark: #0f367f;
-      --bg: #ffffff;
-      --muted: #232425;
-      --surface: #ededed;
-      --text: #2d2f36;
-      --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-      --max-width: 1200px;
-      --gap-lg: 1.5rem;
-      --gap-md: 1rem;
+        --primary: #3c72d0;
+        --secondary:  #adc2e6;
+        --accentLight: #e0e7ff;
+        --accentDark: #0f367f;
+        --bg: #ffffff;
+        --muted: #232425;
+        --surface: #ededed;
+        --text: #2d2f36;
+        --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+        --max-width: 1200px;
+        --gap-lg: 1.5rem;
+        --gap-md: 1rem;
+        
+        /* study-card accents mapped to site palette */
+        --accent1: #3c72d0;
+        --accent2: #144496;
+        --accent3: #6b7280;
       }
 
       * { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; scroll-padding-top: 76px; } /* leave room for sticky navbar when jumping to anchors */
+      html { scroll-behavior: smooth; scroll-padding-top: 100px; }
       body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--surface);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.55;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        background: var(--surface);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.55;
       }
 
       /* NAV (YouTube-like) */
       .navbar {
-      background: var(--bg);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      /* position: sticky; */
-      top: 0;
-      z-index: 1100;
-      padding: .6rem 0;
+        background: var(--bg);
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        top: 0;
+        z-index: 1100;
+        padding: .6rem 0;
+        position: relative;
       }
       .nav-container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--gap-lg);
+        max-width: var(--max-width);
+        /* margin: 0 auto; */
+        /* padding: 0 1rem; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* left-align items inside the nav */
+        gap: 0rem;
       }
-      .nav-logo { color: var(--primary); font-weight:800; font-size:1.15rem; text-decoration:none; display:flex; gap:.5rem; align-items:center; }
+      .nav-logo { 
+        color: var(--primary); 
+        font-weight:800; 
+        font-size:1.15rem; 
+        text-decoration:none; 
+        display:flex; 
+        gap:1rem; 
+        align-items:center;
+        margin-right: 1rem; /* clear any inline left if present */
+      }
       .nav-menu { list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center; flex-wrap:wrap; }
       .nav-link { color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:6px; font-weight:600; }
       .nav-link:hover { background:var(--surface); color:var(--text); }
       .nav-link i { font-size:1rem; color:var(primary); }
 
-      /* HERO — channel/header style with clearer hierarchy (red title, descriptive subtitle) */
-      .hero {
-      background: var(--bg);
-      padding: 2rem 1rem;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-      /* height: 50vh; */
-      }
-      .hero-content { max-width: var(--max-width); margin:0 auto; display:flex; align-items:center; gap:var(--gap-lg); padding:0 1rem; }
-      .hero-left { display:flex; flex-direction:column; gap:.35rem; padding-left: 10%; padding-top: 5%; align-items: center;}
-      .hero-title { font-size:1.75rem; font-weight:900; color:var(--accentDark); letter-spacing: -0.02em; margin: 0; text-align: center;     /* ensure title is centered inside component */ width: 100%; }
-      .hero-subtitle { color:var(--muted); font-size:1rem; max-width:64ch; margin: 0.5rem auto 0;  /* center horizontally on page */ text-align: center; width: 100%; box-sizing: border-box; }
-
-      /* hero CTAs (secondary) — compact ghost buttons */
-      .hero-ctas { display:flex; gap:.6rem; align-items:center; margin-top:.6rem; flex-wrap:wrap;  /* center the buttons inside the component */ }
-      .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid rgba(0,0,0,0.08);
-      padding: .5rem .85rem;
-      border-radius: .45rem;
-      display:inline-flex;
-      align-items:center;
-      gap:.5rem;
-      font-weight:700;
-      font-size:.95rem;
-      transition: transform .12s ease, background .12s ease, color .12s ease;
-      }
-      .btn-ghost i { color:var(--primary); } /* small red icon accent */
-      .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); color:var(--text); }
-
-      /* Sections and cards: stronger hierarchy via spacing, larger headings in red */
+      /* Sections and cards */
       .card-body { background: var(--bg); border-radius:12px; box-shadow: var(--card-shadow); padding:2.75rem; max-width:1200px; margin:0 auto; }
       .section { padding:2.5rem 1rem; }
       .section h2 { color:var(--primary);font-weight:900; font-size:2rem; margin-bottom:1rem; }
@@ -88,7 +72,6 @@
       .section-media { float:right; width:360px; margin:0 0 1rem 1.5rem; border-radius:10px; overflow:hidden; box-shadow:0 10px 30px rgba(16,24,40,0.06); }
       .section-media img { width:100%; display:block; height:auto; }
 
-
       h1{
         font-size: 2.25rem;
         font-weight: 900;
@@ -96,62 +79,50 @@
         margin-bottom: 1rem;
       }
 
-     /* Media figure: groups media with a shared visual indicator and caption */
-     .media-figure {
-       background: rgba(255,255,255,0.98);
-       border-left: 4px solid var(--primary);
-       padding: .5rem;
-       border-radius: 8px;
-       box-shadow: var(--card-shadow);
-       overflow: hidden;
-       display: block;
-     }
-     .media-figure img,
-     .media-figure .video-wrap { display:block; width:100%; border-radius:6px; }
-     .media-figure figcaption {
-       font-size: .92rem;
-       color: var(--muted);
-       padding-top: .5rem;
-       line-height: 1.35;
-     }
-     /* smaller caption tone for source/credit */
-     .media-figure .caption-meta { display:block; font-size:.82rem; color: #6b7280; margin-top:.25rem; }
+      .media-figure {
+        background: rgba(255,255,255,0.98);
+        border-left: 4px solid var(--primary);
+        padding: .5rem;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+        overflow: hidden;
+        display: block;
+      }
+      .media-figure img,
+      .media-figure .video-wrap { display:block; width:100%; border-radius:6px; }
+      .media-figure figcaption {
+        font-size: .92rem;
+        color: var(--muted);
+        padding-top: .5rem;
+        line-height: 1.35;
+      }
+      .media-figure .caption-meta { display:block; font-size:.82rem; color: #6b7280; margin-top:.25rem; }
 
-    /* Blockquote: concise definition of the backfire effect */
-    .citation-block {
-      background: #ffffff;
-      border-left: 4px solid var(--primary); /* accent */
-      padding: 1rem;
-      border-radius: 6px;
-      margin: 1rem 0 1.25rem 0;
-      color: var(--muted);
-      line-height: 1.4;
+      .citation-block {
+        background: #ffffff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        border-radius: 6px;
+        margin: 1rem 0 1.25rem 0;
+        color: var(--muted);
+        line-height: 1.4;
+        width: 100%;
+        box-sizing: border-box;
+        clear: both;
+        font-style: italic;
+        font-size: 0.98rem;
+      }
 
-      /* full width and clear floats so blockquote sits between paragraphs */
-      width: 100%;
-      box-sizing: border-box;
-      clear: both;
-    }
-    /* only the explicit citation text inside the blockquote is italic */
-    .citation-block {
-      margin: 0;
-      color: #52555b;
-      font-weight: 400;
-      font-style: italic;
-      font-size: 0.98rem;
-    }
-
-    /* keep citation links normal (not italic) and visually subtle */
-    .citation-link {
-      color: var(--secondary); 
-      text-decoration: underline;
-      font-weight: 400;
-      font-style: normal;
-      padding: 1px 3px;
-      border-radius: 4px;
-      opacity: 0.92;
-    }
-    .citation-link:hover { background: #f8f2f2; color: #7f1d1d; }
+      .citation-link {
+        color: var(--secondary); 
+        text-decoration: underline;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1px 3px;
+        border-radius: 4px;
+        opacity: 0.92;
+      }
+      .citation-link:hover { background: #f8f2f2; color: #7f1d1d; }
 
       .section + .section { margin-top:1.75rem; }
 
@@ -159,261 +130,405 @@
 
       .subscribe { display:none !important; }
 
-      /* citation link / back-link styles */
-      .citation-link {
-      color: var(--secondary); 
-      text-decoration: underline;
-      font-weight: 500; /* less bold */
-      padding: 1px 3px;
-      border-radius: 4px;
-      opacity: 0.92;
-      }
-      .citation-link:hover { background: #f8f2f2; color: #7f1d1d; }
-
       .back-link {
-      font-size: 0.92rem;
-      margin-left: 0.5rem;
-      text-decoration: none;
-      color: #6b7280;
-      font-weight: 500;
-      opacity: 0.9;
+        font-size: 0.92rem;
+        margin-left: 0.5rem;
+        text-decoration: none;
+        color: #6b7280;
+        font-weight: 500;
+        opacity: 0.9;
       }
       .back-link:hover { color: #111827; opacity: 1; }
 
-      /* subtle numeric style for reference list */
       .reference-number { display: none; }
       ol.references {
-      list-style: decimal;
-      padding-left: 1.4rem;
-      margin: 0;
+        list-style: decimal;
+        padding-left: 1.4rem;
+        margin: 0;
       }
-      /* style the automatic list marker (numbers) */
       ol.references li::marker {
-      color: #6b7280;
-      font-weight: 500;
-      font-size: 1rem;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 1rem;
       }
       ol.references li { margin-bottom: 0.8rem; }
 
-      /* responsive */
-      @media (max-width:992px) {
-      .section-media { width:300px; }
-      .hero-title { font-size:1.45rem; }
-      }
-      @media (max-width:768px) {
-      .nav-container { padding:0 .75rem; gap:.5rem; }
-      .hero-content { flex-direction:column; align-items:center; gap:.6rem; } /* changed from flex-start to center */
-      .section-media { float:none; width:100%; margin:0 0 1rem 0; }
-      .hero-ctas { width:100%; justify-content:center; }
-      .media-figure { border-left-width:3px; padding:.5rem; }
-      }
-
-      /* add responsive video wrapper so iframe has a real height */
       .section-media .video-wrap {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
-      margin-top: 1rem; /* keep your existing spacing */
+        position: relative;
+        padding-top: 56.25%;
+        margin-top: 1rem;
       }
       .section-media .video-wrap iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
       }
 
       /* navbar responsive tweaks for collapse */
-      .navbar { padding: .45rem 0; }
+      .navbar { padding: .45rem 0; position: relative; }
       .navbar-toggler { border: 0; color: var(--primary); background: transparent; font-size: 1.05rem; }
       .navbar-toggler:focus { box-shadow: none; }
       .nav-logo { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--primary); text-decoration:none; }
-      /* ensure collapsed menu looks like current nav */
       .navbar-collapse .nav-menu { display:flex; flex-direction:column; gap:.5rem; padding: .5rem 0; }
       .navbar-collapse .nav-item { list-style: none; }
       .navbar-collapse .nav-link { display:flex; align-items:center; gap:.5rem; padding:.45rem .6rem; border-radius:6px; }
       @media (min-width:768px) {
-      .navbar-collapse .nav-menu { flex-direction:row; align-items:center; gap:1rem; }
+        .navbar-collapse .nav-menu { flex-direction:row; align-items:center; gap:1rem; }
       }
-   
 
+      /* Study Cards */
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
 
-      :root {
-  --primary: #3c72d0;
-  --secondary:  #144496;
-  --bg: #ffffff;
-  --muted: #232425;
-  --surface: #ededed;
-  --text: #2d2f36;
-  --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-  --max-width: 1200px;
-  --gap-lg: 1.5rem;
-  --gap-md: 1rem;
+      .subtitle {
+        text-align: center;
+        color: var(--muted);
+        max-width: 70ch;
+        margin: 0 auto 2.5rem;
+        font-size: 1rem;
+      }
 
-  /* study-card accents mapped to site palette */
-  --accent1: #3c72d0;
-  --accent2: #144496;
-  --accent3: #6b7280;
-}
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: var(--gap-lg);
+      }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+      .card {
+        position: relative;
+        background: var(--bg);
+        border-radius: 16px;
+        padding: 2rem;
+        cursor: pointer;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 260px;
+      }
+      
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+      }
+      
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
 
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
+      .card-face {
+        position: absolute;
+        inset: 0;
+        padding: 2rem;
+        backface-visibility: hidden;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
+      .card-front {
+        background: var(--bg);
+      }
 
-.subtitle {
-  text-align: center;
-  color: var(--muted);
-  max-width: 70ch;
-  margin: 0 auto 2.5rem;
-  font-size: 1rem;
-}
+      .card-back {
+        background: var(--accentLight);
+        transform: rotateY(180deg);
+        text-align: center;
+      }
+      
+      .card h4 {
+        text-align: center;
+        font-size: 1.25rem;
+      }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--gap-lg);
-}
+      .icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.6rem; 
+        margin: 0 auto 1rem;
+        background: var(--accentLight);
+      }
 
-.card {
-  position: relative;
-  background: var(--bg);
-  border-radius: 16px;
-  padding: 2rem;
-  /* overflow: hidden; */
-  cursor: pointer;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* perspective: 1200px; */
-      min-height: 260px;
+      /* HERO */
+      .hero {
+        background: var(--bg);
+        padding: 2rem 1rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.04);
+        position: relative;
+      }
 
+      .hero-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--gap-lg);
+        align-items: start;
+        max-width: var(--max-width);
+        margin: 0 auto 2rem;
+        padding: 0 1rem;
+      }
 
-}
-.card-inner {
-  position: relative;
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: flex-start;
+        text-align: left;
+        padding-right: 1rem;
+        margin-top: 10%;
+      }
+
+      .hero-title {
+        font-size: 2.75rem;
+        font-weight: 900;
+        color: var(--accentDark);
+        letter-spacing: -0.02em;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .hero-subtitle {
+        color: var(--muted);
+        font-size: 1rem;
+        max-width: 64ch;
+        margin: 0.5rem 0 0;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 2%;
+      }
+
+      .hero-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1rem;
+      }
+      
+      .hero-visual img {
+        max-width: 100%;
+        height: auto;
+        width: min(30vw, 320px);
+        display: block;
+      }
+
+      /* CTA bar: sticky navigation */
+      .hero-ctas {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: .35rem;                /* reduced gap between CTAs */
+        justify-content: center;
+        align-items: center;
+        padding: .4rem .6rem;       /* tighter padding around row */
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        box-shadow: 0 2px 12px rgba(16,24,40,0.08);
+        margin: 0;
+        z-index: 1000;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+      }
+
+      .hero-ctas .btn-ghost {
+        flex: 0 0 auto;
+        min-width: 110px;           /* smaller minimum width */
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .25rem;                /* reduced icon/text gap */
+        padding: .35rem .6rem;      /* smaller button padding */
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: .88rem;
+        text-decoration: none;
+        color: var(--muted);
+        background: transparent;
+        transition: all 0.16s ease;
+        border: 1px solid transparent;
+      }
+
+      .hero-ctas .btn-ghost:hover {
+        background: var(--surface);
+        color: var(--text);
+      }
+
+      .hero-ctas .btn-ghost.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+
+      .hero-ctas .btn-ghost i {
+        font-size: .85rem;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 992px) {
+        .hero-title { font-size: 1.45rem; }
+        .section-media { width: 300px; }
+        .hero-ctas .btn-ghost {
+          min-width: 100px;
+          font-size: .84rem;
+          padding: .3rem .5rem;
+        }
+
+        /* hide the full-width hero CTA bar on tablet / phone so the CTAs live in the hamburger */
+        .hero-ctas { display: none !important; }
+
+        /* Apply collapse / mobile layout ONLY when the bootstrap collapse is shown.
+           Important: replace any earlier unscoped rules like "#mainNav .nav-menu { ... }" with these. */
+        #mainNav.collapse.show .nav-menu {
+          flex-direction: column;
+          gap: .35rem;
+          padding: .5rem 0;
+        }
+
+        /* cloned CTA items inside the open collapse */
+        #mainNav.collapse.show .nav-menu .cta-clone .nav-link {
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+          padding: .5rem .75rem;
+          border-radius: 8px;
+          color: var(--muted);
+          background: transparent;
+          font-weight: 700;
+        }
+        #mainNav.collapse.show .nav-menu .cta-clone .nav-link:hover {
+          background: var(--surface);
+          color: var(--text);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+        }
+        .hero-left, .hero-visual { align-items: center; text-align: center; padding: 0; }
+        .hero-ctas {
+          position: sticky;
+          top: 0;
+          flex-wrap: wrap;
+          gap: .5rem;
+          padding: .5rem;
+        }
+        .hero-ctas .btn-ghost { 
+          min-width: calc(50% - .25rem);
+          font-size: .8rem;
+        }
+        .card { padding: 1.5rem; }
+      }
+
+      @media (max-width: 480px) {
+        .hero-ctas { gap: .3rem; padding: .3rem; }
+        .hero-ctas .btn-ghost { min-width: 100%; padding: .45rem; }
+        h1 { font-size: 1.6rem; }
+      }
+
+      /* Make the top navbar sticky so the hamburger stays visible */
+.navbar {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  z-index: 1400;
   width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
-}
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: saturate(120%) blur(6px);
+  box-shadow: 0 2px 10px rgba(16,24,40,0.06);
 }
 
-/* Faces */
-.card-face {
-  position: absolute;
-  inset: 0;
-  padding: 2rem;
-  backface-visibility: hidden;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Front */
-.card-front {
-  background: var(--bg);
-}
-
-/* Back */
-.card-back {
-  background: var(--accentLight);
-  transform: rotateY(180deg);
-  text-align: center;
-}
-.card h4 {
-text-align: center;
-font-size: 1.25rem;
-}
-
-.icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 1.6rem; 
-  margin: 0 auto 1rem;
-  background: var(--accentLight);
-}
-
-@media (max-width: 768px) {
-  h1 { font-size: 1.6rem; }
-  .card { padding: 1.5rem; }
-}
-
-.hero-content {
-  /* switch to 2/3 - 1/3 layout: left = content, right = visual */
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--gap-lg);
-  align-items: center;
+/* keep the inner nav container centered and constrained */
+.nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1rem;
-}
-/* left column content */
-.hero-left { 
   display: flex;
-  flex-direction: column;
-  gap: .75rem;
-  align-items: center; /* center heading + subtitle + CTAs */
-  text-align: center;
-  padding-right: 1rem;
-}
-.hero-title {
-  font-size:1.75rem; 
-  font-weight:900; 
-  /* color:var(--primary);  */
-  letter-spacing: -0.02em;
-  margin: 0; /* centered heading */
-}
-
-/* right column visual */
-.hero-visual {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding-left: 1rem;
-}
-.hero-visual img {
-  max-width: 100%;
-  height: auto;
-  width: 30vw; /* adjust as needed */
-  display:block;
-}
-
-/* center the CTA group inside its parent DIV and center each button in its grid cell */
-.hero-ctas {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(160px, 1fr));
-  gap: .6rem;
-  justify-items: center;   /* center each CTA horizontally in its cell */
   align-items: center;
-  width: 100%;
-  max-width: 720px;        /* keeps the group from growing too wide */
-  margin: .6rem auto 0;    /* center the whole group inside the parent div */
+  justify-content: flex-start; /* left-align items inside the nav */
+  gap: 0;
 }
 
-/* buttons fill their grid cell but remain visually centered */
-.btn-ghost {
-  width: 100%;
-  max-width: 420px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+/* ensure the collapsed menu appears above other content */
+#mainNav.collapse,
+#mainNav.collapse.show {
+  z-index: 1450;
 }
 
-/* very small screens: single column layout, still centered */
-@media (max-width: 480px) {
-  .hero-ctas {
-    grid-template-columns: 1fr;
-    gap: .5rem;
-  }
-  .btn-ghost { max-width: none; }
+/* if you have a sticky CTA bar, make sure it sits below the navbar */
+.hero-ctas { top: calc( /* navbar height */ 56px + 0px ); }
+
+      .citation-anchor {
+        position: relative;
+        top: -100px;
+        visibility: hidden;
+      }
+
+/* Defensive: make sure collapse is actually hidden when closed on small screens */
+@media (max-width: 767.98px) {
+  #mainNav.collapse { display: none !important; }
+  #mainNav.collapse.show { display: block !important; }
 }
+
+
+      /* navbar responsive tweaks for collapse */
+      .navbar { padding: .45rem 0; position: relative; }
+      .navbar-toggler { border: 0; color: var(--primary); background: transparent; font-size: 1.05rem; display: none; }
+      .navbar-toggler:focus { box-shadow: none; }
+      .nav-logo { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--primary); text-decoration:none; }
+      /* On smaller screens: keep full top navbar as a single icon-only row, no hamburger */
+      @media (max-width: 992px) {
+        /* hide the toggler (no hamburger) */
+        .navbar-toggler { display: none !important; }
+      
+        /* ensure collapsed container behaves like a normal flex row */
+        #mainNav,
+        #mainNav.collapse,
+        #mainNav.collapse.show {
+          display: flex !important;
+          align-items: center;
+        }
+      
+        /* nav menu: force single-row layout */
+        #mainNav .nav-menu {
+          display: flex !important;
+          flex-direction: row !important;
+          gap: .4rem;
+          align-items: center;
+          margin-left: auto;
+        }
+      
+        /* show only icons (hide the text labels) */
+        #mainNav .nav-text {
+          display: none !important;
+          width: 0;
+          overflow: hidden;
+        }
+      
+        /* tighten spacing for icon-only links */
+        #mainNav .nav-link {
+          padding: .25rem .45rem;
+          min-width: 40px;
+          justify-content: center;
+        }
+        #mainNav .nav-link i { font-size: 1.05rem; }
+      }
+      /*

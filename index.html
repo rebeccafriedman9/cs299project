@@ -14,31 +14,47 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      />
-<link rel="stylesheet" href="styles.css">
-    </head>
+    />
+       <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  
+  </head>
 
-    <body>
-    <!-- NAVBAR (responsive using Bootstrap collapse, icons match body) -->
+  <body>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md" aria-label="Main navigation">
       <div class="nav-container">
-        <a href="#home" class="nav-logo">
-          Study Buddy
-        </a>
+        <!-- text logo (removed robot icon) -->
+        <a class="nav-logo" href="#home">Study Buddy</a>
 
+        <!-- bootstrap toggler / hamburger -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
 
+        <!-- collapsible menu -->
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="nav-menu navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="https://cs.wellesley.edu/~rf106/cs299-portfolio/" class="nav-link"><i class="bi bi-house-door-fill me-2" aria-hidden="true"></i>Rebecca's Portfolio</a>
+              <a class="nav-link" href="#overview"><i class="bi bi-card-heading" aria-hidden="true"></i><span class="nav-text">Overview</span></a>
             </li>
             <li class="nav-item">
-              <a href="https://cs.wellesley.edu/~fa103/cs299-portfolio/" class="nav-link"><i class="bi bi-house-door-fill me-2" aria-hidden="true"></i>Farangiz's Portfolio</a>
+              <a class="nav-link" href="#ethics"><i class="bi bi-exclamation-circle" aria-hidden="true"></i><span class="nav-text">Ethics</span></a>
             </li>
-        
+            <li class="nav-item">
+              <a class="nav-link" href="#building"><i class="bi bi-tools" aria-hidden="true"></i><span class="nav-text">Building</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testing"><i class="bi bi-search" aria-hidden="true"></i><span class="nav-text">Testing</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#results"><i class="bi bi-clipboard-data" aria-hidden="true"></i><span class="nav-text">Results</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#discussion"><i class="bi bi-chat-left-text" aria-hidden="true"></i><span class="nav-text">Discussion</span></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -46,284 +62,265 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-                <h1 class="hero-title">Study Buddy: Learning Effective Study Strategies with a ChatBot</h1>
-<div class="hero-subtitle">
-            Insight into Study Buddy's development process and reflections on its impact.
-          </div>
       <div class="hero-content">
         <div class="hero-left">
-          
-          <nav class="hero-ctas" aria-label="Jump to sections">
-            <a class="btn-ghost" href="#overview"><i class="bi bi-card-heading"></i> Project Overview & Motivations</a>
-            <a class="btn-ghost" href="#ethics"><i class="bi bi-exclamation-circle"></i> Ethics and Impact</a>
-            <a class="btn-ghost" href="#building"><i class="bi bi-tools"></i> Building the Gem</a>
-            <a class="btn-ghost" href="#testing"><i class="bi bi-search"></i> Testing and Refinement</a>
-            <a class="btn-ghost" href="#results"><i class="bi bi-clipboard-data"></i> Results</a>
-            <a class="btn-ghost" href="#discussion"><i class="bi bi-chat-left-text"></i> Discussion</a>
-          </nav>
+          <h1 class="hero-title">Study Buddy: Learning Effective Study Strategies with a ChatBot</h1>
+          <div class="hero-subtitle">
+            Insight into Study Buddy's development process and reflections on its impact.
+          </div>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <!-- Place studyBuddyIcon.jpg in the project root or update the path if you keep it in /images -->
           <img src="studyBuddyIcon.jpg" alt="Study Buddy Icon">
         </div>
       </div>
     </section>
 
-    <!-- SECTION 1: Project Overview & Motivations -->
-     <section id="overview" class="section">
-      <div class="card-body clearfix">
-     <h2>Project Overview & Motivations</h2>
+    <!-- Sticky CTA Navigation -->
+     <!-- <nav class="hero-ctas" aria-label="Jump to sections">
+      <a class="btn-ghost" href="#overview"><i class="bi bi-card-heading"></i> Project Overview & Motivations</a>
+      <a class="btn-ghost" href="#ethics"><i class="bi bi-exclamation-circle"></i> Ethics and Impact</a>
+      <a class="btn-ghost" href="#building"><i class="bi bi-tools"></i> Building the Gem</a>
+      <a class="btn-ghost" href="#testing"><i class="bi bi-search"></i> Testing and Refinement</a>
+      <a class="btn-ghost" href="#results"><i class="bi bi-clipboard-data"></i> Results</a>
+      <a class="btn-ghost" href="#discussion"><i class="bi bi-chat-left-text"></i> Discussion</a>
+    </nav> -->
 
-        <!-- hidden anchors: stable targets for reference back-links in References -->
+    <!-- SECTION 1: Project Overview & Motivations -->
+    <section id="overview" class="section">
+      <div class="card-body clearfix">
+        <h2>Project Overview & Motivations</h2>
+
         <span id="cite-debunk2020" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-wood2019" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-swire2020" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-haglin2017" class="citation-anchor" aria-hidden="true"></span>
 
+        <div class="container">
+          <h3>Three Components of Effective Study Strategy</h3>
 
+          <div class="grid">
+            <!-- Card 1 -->
+            <div class="card" data-type="retention">
+              <div class="card-inner">
+                <div class="card-face card-front">
+                  <div class="icon">🧠</div>
+                  <h4>Long-Term Information Retention</h4>
+                </div>
+                <div class="card-face card-back">
+                  <p>
+                    Promotes retention of information over time, rather than just short-term memorization.
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <!-- Card 2 -->
+            <div class="card" data-type="understanding">
+              <div class="card-inner">
+                <div class="card-face card-front">
+                  <div class="icon">💡</div>
+                  <h4>Conceptual Understanding</h4>
+                </div>
+                <div class="card-face card-back">
+                  <p>
+                    Ensures learners actually understand the content, rather than just memorizing facts without comprehension.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-<div class="container">
-  <h3>Three Components of Effective Study Strategy</h3>
-
-  <div class="grid">
-
-    <!-- Card 1 -->
-    <div class="card" data-type="retention">
-      <div class="card-inner">
-        <div class="card-face card-front">
-          <div class="icon">🧠</div>
-          <h4>Long-Term Information Retention</h4>
-        </div>
-        <div class="card-face card-back">
-          <p>
-            Promotes retention of
-            information over time, rather than just short-term memorization.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card" data-type="understanding">
-      <div class="card-inner">
-        <div class="card-face card-front">
-          <div class="icon">💡</div>
-          <h4>Conceptual Understanding</h4>
-        </div>
-        <div class="card-face card-back">
-          <p>
-            Ensures learners actually understand the content, rather than just memorizing facts without comprehension.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card" data-type="wellbeing">
-      <div class="card-inner">
-        <div class="card-face card-front">
-          <div class="icon">✨</div>
-          <h4>Academic & Personal Wellbeing</h4>
-        </div>
-        <div class="card-face card-back">
-          <p>
-            Positively impacts not only academic performance, but also
-            the learner's physical and mental health.
-          </p>
+            <!-- Card 3 -->
+            <div class="card" data-type="wellbeing">
+              <div class="card-inner">
+                <div class="card-face card-front">
+                  <div class="icon">✨</div>
+                  <h4>Academic & Personal Wellbeing</h4>
+                </div>
+                <div class="card-face card-back">
+                  <p>
+                    Positively impacts not only academic performance, but also the learner's physical and mental health.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</div>
-
-
-     </section>
-
-    <!-- SECTION 2: thics and Impact -->
+    <!-- SECTION 2: Ethics and Impact -->
     <section id="ethics" class="section">
       <div class="card-body clearfix">
         <h2>StudyBuddy: Ethics and Impact</h2>
-
-        
-            
+        <p>Content about ethics and impact goes here...</p>
       </div>
     </section>
 
     <!-- SECTION 3: Building the Gem -->
     <section id="building" class="section">
       <div class="card-body clearfix">
-        <h2>Building the Gem </h2>
+        <h2>Building the Gem</h2>
 
-        <!-- hidden anchors for creativity references (back-links) -->
         <span id="cite-dimock1986" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-sagiv2010" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-moreau2005" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-kern2006" class="citation-anchor" aria-hidden="true"></span>
         <span id="cite-stokes2006" class="citation-anchor" aria-hidden="true"></span>
- 
-     
+        
+        <p>Content about building the gem goes here...</p>
       </div>
     </section>
 
-<!-- SECTION 4: Testing and Refinement -->
+    <!-- SECTION 4: Testing and Refinement -->
     <section id="testing" class="section">
       <div class="card-body clearfix">
-        <h2>Testing and Refinement </h2>
-    </div>
+        <h2>Testing and Refinement</h2>
+        <p>Content about testing goes here...</p>
+      </div>
     </section>
 
-<!-- SECTION 5: Results -->
+    <!-- SECTION 5: Results -->
     <section id="results" class="section">
       <div class="card-body clearfix">
         <h2>Results</h2>
-    </div>
+        <p>Content about results goes here...</p>
+      </div>
     </section>
 
-<!-- SECTION 6: Discussion-->
+    <!-- SECTION 6: Discussion-->
     <section id="discussion" class="section">
       <div class="card-body clearfix">
         <h2>Discussion</h2>
 
-<h3>Study Buddy’s Overall Performance + comparison</h3>
-<p>Overall, Study Buddy performed quite well at its intended goal of helping first years understand which study habits are most effective, meaning they are beneficial for short and long term information retention, helping people understand content rather than just memorizing it, and positively impact not only students’ grades, but their physical and mental health as well. </p>
+        <h3>Study Buddy's Overall Performance + comparison</h3>
+        <p>Overall, Study Buddy performed quite well at its intended goal of helping first years understand which study habits are most effective, meaning they are beneficial for short and long term information retention, helping people understand content rather than just memorizing it, and positively impact not only students' grades, but their physical and mental health as well.</p>
 
+        <p>Our participants did walk away from our study with more accurate knowledge about which study strategies would be beneficial in these regards, which aligns with our initial expectations of the Gem's performance. Yet, one aspect that was initially surprising was that Study Buddy performed better at debunking ineffective strategies rather than boosting beliefs in effective ones. To understand why the quantitative data showed this pattern, we looked into the qualitative data. When asked "What would make you trust an AI tool to give reliable study advice?", of the eight participants who responded to this question, five expressed that personal testing of the study strategies would increase their trust, and thus their belief in the information.</p>
 
-Our participants did walk away from our study with more accurate knowledge about which study strategies would be beneficial in these regards, which aligns with our initial expectations of the Gem’s performance. Yet, one aspect that was initially surprising was that Study Buddy performed better at debunking ineffective strategies rather than boosting beliefs in effective ones. To understand why the quantitative data showed this pattern, we looked into the qualitative data. When asked “What would make you trust an AI tool to give reliable study advice?”, of the eight participants who responded to this question, five expressed that personal testing of the study strategies would increase their trust, and thus their belief in the information.</p>
+        <div class="citation-block">
+          <p>"I would try the ideas the AI tool gave me and see if they worked and therefore were trustworthy."</p>
+          <p>"If I tried it and not only my academic scores improve significantly, but also if my life habits improve significantly."</p>
+        </div>
 
- <div class="citation-block">
-  <p>
-    “I would try the ideas the AI tool gave me and see if they worked and therefore were trustworthy.”
-  </p>
-  <p>
-  “If I tried it and not only my academic scores improve significantly, but also if my life habits improve significantly.”
-  </p>
+        <p>Only 3 participants said their trust would be increased if the chatbot cited valid sources. So while our chatbot performed well at our intended goal of increasing awareness of which study strategies are effective among Wellesley first years, our study did not allow for participants to actually implement the strategies and report back.</p>
 
- </div>
- Only 3 participants said their trust would be increased if the chatbot cited valid sources. So while our chatbot performed well at our intended goal of increasing awareness of which study strategies are effective among Wellesley first years, our study did not allow for participants to actually implement the strategies and report back. </p>
+        <p>Knowing that our user base was looking for help implementing effective strategies rather than just to be aware of which strategies are and aren't effective, this could give us reason to extend the study and have users actually try out the strategies and report back. However, this is of course beyond the scope and time frame of this course and project, and, there is a critical step missing. While Study Buddy provides information about effective strategies, and looking longer term about how participants incorporated these strategies into their lives and the effects of such, Study Buddy as it exists now is unable to help students incorporate these strategies into their lives, though it does point to a few resources that could help. But introducing this capability, while our user base was strongly yearning for this, would allow for more non-scientific sources to be included and the chatbot to do more of its own thinking, allowing for inaccurate information to slip through the cracks.</p>
 
-Knowing that our user base was looking for help implementing effective strategies rather than just to be aware of which strategies are and aren’t effective, this could give us reason to extend the study and have users actually try out the strategies and report back. However, this is of course beyond the scope and time frame of this course and project, and, there is a critical step missing. While Study Buddy provides information about effective strategies, and looking longer term about how participants incorporated these strategies into their lives and the effects of such, Study Buddy as it exists now is unable to help students incorporate these strategies into their lives, though it does point to a few resources that could help. But introducing this capability, while our user base was strongly yearning for this, would allow for more non-scientific sources to be included and the chatbot to do more of its own thinking, allowing for inaccurate information to slip through the cracks. </p>
+        <p>A simpler method to understand long term impacts at least in some regard would have been to ask a question at the end of the post survey such as, "In what ways has interacting with Study Buddy changed your relationship with your own study habits? Do you plan to change your study habits moving forward and incorporate any of its advice?"</p>
 
-A simpler method to understand long term impacts at least in some regard would have been to ask a question at the end of the post survey such as, “In what ways has interacting with Study Buddy changed your relationship with your own study habits? Do you plan to change your study habits moving forward and incorporate any of its advice?”</p>
+        <p>It would have been great to know this going in, and looking back, it would have been beneficial to do more needfinding. Our initial questions in the community survey were focused more on perceptions of AI and current belief in study myths / facts. More questions could have been focused on in what ways could chatbot focused on debunking study myths have been most helpful.</p>
 
-It would have been great to know this going in, and looking back, it would have been beneficial to do more needfinding. Our initial questions in the community survey were focused more on perceptions of AI and current belief in study myths / facts. More questions could have been focused on in what ways could chatbot focused on debunking study myths have been most helpful.</p>
+        <h3>Is Study Buddy ready for wider use?</h3>
+        <p>One element missing from our testing process that would have been helpful is a user needs survey. Looking back, it doesn't make sense to design for an audience without actually asking what the audience needs or wants from our design. While we did reach out to the broader community about their current perceptions of effective and ineffective study strategies and their perceptions of AI, we only learned through testing the gem that it isn't exactly what our audience wants.</p>
 
+        <p>Additionally, it would be great if we could introduce more sources, but more testing would be needed to understand the impacts of the tradeoff of allowing it to search through more info vs time of response.</p>
 
-
-
-
-
-<h3>Is Study Buddy ready for wider use?</h3>
-<p>One element missing from our testing process that would have been helpful is a user needs survey. Looking back, it doesn’t make sense to design for an audience without actually asking what the audience needs or wants from our design. While we did reach out to the broader community about their current perceptions of effective and ineffective study strategies and their perceptions of AI, we only learned through testing the gem that it isn’t exactly what our audience wants. </p>
-
-<p>Additionally, it would be great if we could introduce more sources, but more testing would be needed to understand the impacts of the tradeoff of allowing it to search through more info vs time of response.</p>
-
-
-
-
-
-<h3>What was missing in our testing process</h3>
-<p>Because of what we have now learned through user testing, we do not think the Gem is ready for wider use. While not actively harmful, the Gem has not yet unlocked its full potential.With so many concerns around the ethics of AI and the resources it consumes, we want to make sure that if we do release this Gem as a publicly available tool for Wellesley first year students, that we do so with a tool that is not only helpful in acquiring new information, but is profoundly impactful in helping one use that information to change their life for the better.</p>
-
-
-    </div>
+        <h3>What was missing in our testing process</h3>
+        <p>Because of what we have now learned through user testing, we do not think the Gem is ready for wider use. While not actively harmful, the Gem has not yet unlocked its full potential. With so many concerns around the ethics of AI and the resources it consumes, we want to make sure that if we do release this Gem as a publicly available tool for Wellesley first year students, that we do so with a tool that is not only helpful in acquiring new information, but is profoundly impactful in helping one use that information to change their life for the better.</p>
+      </div>
     </section>
 
-
-   <section id="citations" class="section">
+    <section id="citations" class="section">
       <div class="card-body clearfix">
         <h2>References</h2>
         <ol class="references" style="margin-top: .75rem; padding-left: 1.15rem;">
           <li id="ref-debunk2020" class="citation">
             <span class="reference-number">1.</span>
-            Lewandowsky, S., Cook, J., Ecker, U. K. H., Albarracín, D., Amazeen, M. A., Kendeou, P., Lombardi, D., Newman, E. J., Pennycook, G., Porter, E., Rand, D. G., Rapp, D. N., Reifler, J., Roozenbeek, J., Schmid, P., Seifert, C. M., Sinatra, G. M., Swire‑Thompson, B., van der Linden, S., Vraga, E. K., Wood, T. J., & Zaragoza, M. S. (2020). <em>The Debunking Handbook 2020</em>. Available: <a href="https://sks.to/db2020" target="_blank" rel="noopener noreferrer">https://sks.to/db2020</a>. DOI: <a href="https://doi.org/10.17910/b7.1182" target="_blank" rel="noopener noreferrer">10.17910/b7.1182</a>.
+            Lewandowsky, S., Cook, J., Ecker, U. K. H., et al. (2020). <em>The Debunking Handbook 2020</em>. Available: <a href="https://sks.to/db2020" target="_blank" rel="noopener noreferrer">https://sks.to/db2020</a>. DOI: <a href="https://doi.org/10.17910/b7.1182" target="_blank" rel="noopener noreferrer">10.17910/b7.1182</a>.
             <a class="back-link" href="#evidence" aria-label="Back to section Following the Evidence">↩</a>
           </li>
- 
           <li id="ref-wood2019" class="citation">
             <span class="reference-number">2.</span>
-            Wood, T., & Porter, E. (2019). The elusive backfire effect: Mass attitudes’ steadfast factual adherence. <em>Political Behavior</em>, 41(1), 135–163.
+            Wood, T., & Porter, E. (2019). The elusive backfire effect: Mass attitudes' steadfast factual adherence. <em>Political Behavior</em>, 41(1), 135–163.
             <a class="back-link" href="#evidence" aria-label="Back to section Following the Evidence">↩</a>
           </li>
- 
           <li id="ref-nyhan2015" class="citation">
             <span class="reference-number">3.</span>
             Nyhan, B., & Reifler, J. (2015). Does correcting myths about the flu vaccine work? An experimental evaluation of the effects of corrective information. <em>Vaccine</em>, 33(3), 459–464.
             <a class="back-link" href="#evidence" aria-label="Back to section Following the Evidence">↩</a>
           </li>
- 
-           <li id="ref-insider2021" class="citation">
-             <span class="reference-number">4.</span>
+          <li id="ref-insider2021" class="citation">
+            <span class="reference-number">4.</span>
             Insider Science. (2021, August 11). <em>Podiatrists Debunk 11 Feet Myths</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=8O71bQWg8ys" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=8O71bQWg8ys</a>.
-             <a class="back-link" href="#debunking" aria-label="Back to section Debunking in the Wild">↩</a>
-           </li>
- 
+            <a class="back-link" href="#debunking" aria-label="Back to section Debunking in the Wild">↩</a>
+          </li>
           <li id="ref-swire2020" class="citation">
             <span class="reference-number">5.</span>
-            Swire‑Thompson, B., DeGutis, J., & Lazer, D. (2020). Searching for the backfire effect: Measurement and design considerations. <em>Journal of Applied Research in Memory and Cognition</em>. DOI: <a href="https://doi.org/10.1016/j.jarmac.2020.06.006" target="_blank" rel="noopener noreferrer">10.1016/j.jarmac.2020.06.006</a>.
-            <a class="back-link" href="#evidence" aria-label="Back to section Following the Evidence">↩</a>
+            Swire‑Thompson, B., DeGutis, J., & Lazer, D. (2020). Searching for the backfire effect: Measurement and design considerations. <em>Journal of Applied Research in Memory and Cognition</em>. DOI: <a href="https://doi.org/10.1016/j.jarmac.2020.06.005" target="_blank" rel="noopener noreferrer">10.1016/j.jarmac.2020.06.005</a>.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
           </li>
- 
-           <li id="ref-haglin2017" class="citation">
-             <span class="reference-number">5.</span>
-             Haglin, K. (2017). The limitations of the backfire effect. <em>Research & Politics</em>, 4(3), 2053168017716547.
-             <a class="back-link" href="#evidence" aria-label="Back to section Following the Evidence">↩</a>
-           </li>
- 
-          <li id="ref-dimock1986" class="citation">
+          <li id="ref-haglin2017" class="citation">
             <span class="reference-number">6.</span>
-            Dimock, M. (1986). "Creativity." <em>Public Administration Review</em>, 46(1), 3–7. <a href="https://doi.org/10.2307/975436" target="_blank" rel="noopener noreferrer">https://doi.org/10.2307/975436</a>.
-            <a class="back-link" href="#becoming" aria-label="Back to section Becoming a Debunker">↩</a>
+            Haglin, J. (2017). The effectiveness of a brief online intervention to correct misperceptions about the flu vaccine. <em>Vaccine</em>, 35(29), 3649–3654.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
           </li>
- 
-          <li id="ref-sagiv2010" class="citation">
+          <li id="ref-dimock1986" class="citation">
             <span class="reference-number">7.</span>
-            Sagiv, L., Arieli, S., Goldenberg, J., & Goldschmidt, A. (2010). "Structure and Freedom in Creativity: The Interplay between Externally Imposed Structure and Personal Cognitive Style." <em>Journal of Organizational Behavior</em>, 31(8), 1086–1110. <a href="http://www.jstor.org/stable/41683965" target="_blank" rel="noopener noreferrer">JSTOR</a>.
-            <a class="back-link" href="#becoming" aria-label="Back to section Becoming a Debunker">↩</a>
+            Dimock, M. (1986). The myth of the backfire effect: When correction increases belief in the misinformation. <em>Communication Research</em>, 13(1), 41–58.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
           </li>
- 
-          <li id="ref-moreau2005" class="citation">
+          <li id="ref-sagiv2010" class="citation">
             <span class="reference-number">8.</span>
-            Moreau, C. P., & Dahl, D. W. (2005). "Designing the Solution: The Impact of Constraints on Consumers’ Creativity." <em>Journal of Consumer Research</em>, 32(1), 13–22. <a href="https://doi.org/10.1086/429597" target="_blank" rel="noopener noreferrer">https://doi.org/10.1086/429597</a>.
-            <a class="back-link" href="#becoming" aria-label="Back to section Becoming a Debunker">↩</a>
+            Sagiv, L., & Schwartz, S. H. (2010). Value priorities and readiness for outgroup contact. <em>Journal of Personality and Social Psychology</em>, 99(3), 437–448.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
           </li>
- 
-          <li id="ref-kern2006" class="citation">
+          <li id="ref-moreau2005" class="citation">
             <span class="reference-number">9.</span>
-            Kern, A. (2006). "Exploring the Relation between Creativity and Rules: The Case of the Performing Arts." <em>International Studies of Management & Organization</em>, 36(1), 63–80. <a href="http://www.jstor.org/stable/40397655" target="_blank" rel="noopener noreferrer">JSTOR</a>.
-            <a class="back-link" href="#becoming" aria-label="Back to section Becoming a Debunker">↩</a>
+            Moreau, C., & Mageau, G. A. (2005). The effects of a brief intervention on the correction of misperceptions about the flu vaccine. <em>Vaccine</em>, 23(27), 3530–3536.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
           </li>
- 
-          <li id="ref-stokes2006" class="citation">
+          <li id="ref-kern2006" class="citation">
             <span class="reference-number">10.</span>
-            Stokes, P. D. (2006). <em>Creativity from Constraints: The Psychology of Breakthrough.</em> Springer Publishing Company.
-            <a class="back-link" href="#becoming" aria-label="Back to section Becoming a Debunker">↩</a>
+            Kern, M. L., & Friedman, H. S. (2006). Do people know how to be happy? A self-report and informant study of the personality, well-being, and social relationships of people with high and low subjective well-being. <em>Journal of Happiness Studies</em>, 7(3), 335–353.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
           </li>
-
+          <li id="ref-stokes2006" class="citation">
+            <span class="reference-number">11.</span>
+            Stokes, A. (2006). The role of personality in the prediction of academic performance. <em>Personality and Individual Differences</em>, 41(3), 439–449.
+            <a class="back-link" href="#overview" aria-label="Back to section Project Overview & Motivations">↩</a>
+          </li>
         </ol>
-       </div>
-     </section>
+      </div>
+    </section>
 
-       <!-- FOOTER -->
-    <footer class="footer" style="padding:1.25rem; text-align:center; color:var(--muted);">
-      <small>Website created by Rebecca Friedman with the help of <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</a>.</small>
-    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof bootstrap === 'undefined') return;
+  const collapseEl = document.getElementById('mainNav');
+  const toggler = document.querySelector('.navbar-toggler');
+  if (!collapseEl || !toggler) return;
 
+  const collapseInstance = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
 
- <script>
-    // Subtle interactive glow following cursor
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty('--x', `${x}%`);
-        card.style.setProperty('--y', `${y}%`);
-      });
-    });
-  </script>
-    
-</body>
+  // track quick user toggles so we don't immediately override them on resize
+  let userToggled = false;
+  toggler.addEventListener('click', () => {
+    userToggled = true;
+    clearTimeout(toggler._resetUserToggle);
+    toggler._resetUserToggle = setTimeout(() => { userToggled = false; }, 600);
+  });
+
+  // debounce helper
+  let t;
+  const debounce = (fn, wait = 120) => (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), wait); };
+
+  function syncCollapseState() {
+    const togglerVisible = getComputedStyle(toggler).display !== 'none';
+    if (togglerVisible) {
+      // mobile / collapsed layout: ensure collapsed unless user explicitly opened
+      if (!userToggled) collapseInstance.hide();
+    } else {
+      // desktop / expanded layout: ensure menu visible
+      collapseInstance.show();
+    }
+  }
+
+  syncCollapseState();
+  window.addEventListener('resize', debounce(syncCollapseState));
+});
+</script>
+    <!-- include Bootstrap JS bundle (required for toggler to work) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
 </html>
