@@ -19,6 +19,10 @@
       rel="stylesheet"
       href="styles.css"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   
   </head>
 
@@ -294,12 +298,16 @@ To track belief change, we asked participants to rate five statements about stud
   <li>I believe rereading my notes repeatedly is one of the best ways to learn.</li>
 </ul>
 
+<div id="chart-dumbbell" class="viz"></div>
+
 <p>
 The slope charts below show how each individual’s beliefs changed over time.
 </p>
 
 <h5>Increased Belief in Effective Study Strategies</h5>
 
+<div id="chart-slope-q1" class="viz"></div>
+<div id="chart-slope-q3" class="viz"></div>
 <p>
 For Question 1 in the post-survey, most participants showed an increase after using our chatbot. Two participants stayed the same because they already started with a high belief in this strategy, and one participant showed a decrease.
 </p>
@@ -310,6 +318,8 @@ Question 3 showed a pretty similar pattern. Overall, the chatbot mainly strength
 
 <h5>Decreased Belief in Ineffective Strategies</h5>
 
+<div id="chart-slope-q2" class="viz"></div>
+<div id="chart-slope-q5" class="viz"></div>
 <p>
 Questions 2 and 5 evaluated changes in beliefs about ineffective study strategies. For Question 2 about multitasking, four participants showed a decrease in belief after using our chatbot, which is exactly what we would hope to see. Five participants stayed constant because they already held very low belief in multitasking to begin with, and one participant showed a slight increase.
 </p>
@@ -320,6 +330,7 @@ Question 5, which refers to rereading notes, showed a decrease in belief from mo
 
 <h5>Differing Belief Changes in Effective Study Strategies</h5>
 
+**<div id="chart-slope-q4" class="viz"></div>**
 <p>
 Question 4 addressed beliefs about retrieval practice, and the post-survey results showed a mixed pattern. This makes sense to us because retrieval practice is a more complex strategy, and students come in with different levels of understanding. Depending on what they already believed, the bot’s explanation might have clarified or shifted their view in different ways.
 </p>
@@ -342,6 +353,8 @@ A few areas consistently stood out as strengths. Students agreed that the bot ci
 Engagement was clearly the weakest area. The “Engaging/Interactive” item was the only one with noticeable disagreement responses, and users described the interaction as repetitive or overly formal. While overall experience ratings leaned positive, many participants selected “Neutral,” suggesting that the bot felt more adequate than compelling.
 </p>
 
+<div id="chart-diverging" class="viz"></div>
+<div id="chart-heatmap" class="viz"></div>
 <h4>Qualitative Results</h4>
 
 <p>
@@ -527,6 +540,28 @@ document.addEventListener('DOMContentLoaded', () => {
   syncCollapseState();
   window.addEventListener('resize', debounce(syncCollapseState));
 });
+
+async function embedChart(divId, jsonPath) {
+    const res = await fetch(jsonPath);
+    const spec = await res.json();
+    return vegaEmbed(divId, spec, { actions: true }); // actions=true shows the menu
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // If your JSON files are in a subfolder (like charts/), change paths accordingly.
+    embedChart("#chart-dumbbell", "dumbbell_chart.json");
+
+    embedChart("#chart-slope-q1", "slope_chart_Q1.json");
+    embedChart("#chart-slope-q2", "slope_chart_Q2.json");
+    embedChart("#chart-slope-q3", "slope_chart_Q3.json");
+    embedChart("#chart-slope-q4", "slope_chart_Q4.json");
+    embedChart("#chart-slope-q5", "slope_chart_Q5.json");
+
+    embedChart("#chart-diverging", "diverging_stacked_bar_chart.json");
+    embedChart("#chart-heatmap", "raw_response_heatmap.json");
+  });
+
+
 </script>
     <!-- include Bootstrap JS bundle (required for toggler to work) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
