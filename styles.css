@@ -594,3 +594,15 @@ a {
   text-decoration: none;
   color: var(--muted);
 }
+
+.blueQuote{
+
+       color: var(--primary);
+        padding: 1rem;
+        margin-left: 5%;
+        line-height: 1.4;
+        width: 100%;
+
+        font-style: italic;
+        font-size: 1.15rem;  
+}
