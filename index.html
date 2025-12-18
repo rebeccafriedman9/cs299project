@@ -15,7 +15,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-       <link
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+/>       <link
       rel="stylesheet"
       href="styles.css"
     />
@@ -85,28 +88,28 @@
       <div class="card-body clearfix">
         <h2>Project Overview & Motivations</h2>
 
-        <span id="cite-debunk2020" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-wood2019" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-swire2020" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-haglin2017" class="citation-anchor" aria-hidden="true"></span>
-
+   
         <p>
        We built and tested Study Buddy, a custom chatbot designed for Wellesley first year students who may not yet have a toolkit of effective strategies for studying higher-level course material in a college environment.
         </p>
 
         <p>
-       We performed a small user study (n=10) to see to what extent a custom chatbot could serve as an effective tool for helping Wellesley first years gain awareness of which popular study strategies are actually effective, and which aren’t, while also connecting first years with further resources that can help them right here at Wellesley.
+       We performed a small user study (N=10) to see to what extent a custom chatbot could serve as an effective tool for helping Wellesley first years gain awareness of which popular study strategies are actually effective, and which aren’t, while also connecting first years with further resources that can help them right here at Wellesley.
       </p>
         <p>
 Two research questions guided our work:
         <p>
 <div class="citation-block">
-        <p> RQ1: Can a chatbot that teaches evidence-based study strategies actually help Wellesley first-year students? </p>
+        <p> RQ1: To what extent can a chatbot that informs about evidence-based, effective study strategies actually help Wellesley first-year students? </p>
        <br>
         <p> RQ2: What design choices make that kind of chatbot genuinely helpful? </p>
         </div>
+
+
+
+
 <p>
-While creating the Gem, we intentionally kept the chatbot’s scope very narrow. Instead of trying to act like a general academic advisor, we stuck to study habits and common study myths, a decision stemming from wanting the bot to be reliable and not overstep. By limiting its knowledge base to peer-reviewed research from psychology, cognitive science, and learning science journals we selected ourselves, we did our best to mitigate risks of hallucinations, especially regarding information and sources. 
+While creating the Gem, we intentionally kept the chatbot’s scope very narrow. Instead of trying to act like a general academic advisor, we stuck to study habits and common study myths, a decision stemming from wanting the bot to be reliable and not overstep. By limiting its knowledge base to peer-reviewed research from psychology, cognitive science, and learning science journals we selected ourselves, we did our best to mitigate risks of hallucinations, especially regarding not only false information, but also sources. 
 </p>
 
 <p>
@@ -129,12 +132,10 @@ Overall, this project is especially relevant to Wellesley because the transition
     <section id="ethics" class="section">
       <div class="card-body clearfix">
 
-        <span id="dataFeminismCitation" class="citation-anchor" aria-hidden="true"></span>
-
         <h2>StudyBuddy: Ethics and Impact</h2>
 
 <p>
-There are many ethical issues related to AI use in general, such as the vast amount of energy and resources it consumes, the potential for algorithmic bias, and the potential for false information and hallucinations. Our participants were not hesitant to express their concerns about generative AI usage. There were mainly concerns about AI being unethical in general, and when specifics were mentioned, it was in reference to resource consumption and environmental impacts. When participants were asked What would make you trust an AI tool to give reliable study advice?,  one responded 
+There are many ethical issues related to AI use in general, such as the vast amounts of energy and resources it consumes, the potential for algorithmic bias, and the potential for false information and hallucinations. Our participants were not hesitant to express their concerns about generative AI usage. There were mainly concerns about AI being unethical in general, and when specifics were mentioned, it was in reference to resource consumption and environmental impacts. When participants were asked What would make you trust an AI tool to give reliable study advice?,  one responded 
 </p>
 
 <div class="blueQuote">
@@ -148,11 +149,12 @@ This participant was not alone in their beliefs on the matter. Due to the nature
 Other problems arise from the use of genAI within this particular scope. Notably, interacting with an AI chatbot lessens the potential impact Wellesley’s community can have. If Study Buddy exists as a resource that students can interact with on their own,  students may not be as inclined to go to their academic success coach’s (ASC) motivation stations, PLTC workshops, or otherwise access support from those whose job it is to support them academically. Interacting with Study Buddy has the potential to cause an overreliance on AI tools, and could potentially lead students from veering away from professor and TA office hours and towards AI tools that not only isolate them from their community, but again partake in all of the aforementioned ethical quandaries.
 </p>
 <p>
-Throughout the process, we have been especially cognizant of our positionality in regards to the Wellesley first year community. Though as Wellesley students ourselves we have a lot in common with the first year students at this institution, we, as upperclassmen, are ultimately <strong><em> not </strong></em> a part of their internal community. To grapple with this, we have been keeping in mind the principles of data feminism, most notably, embracing pluralism, and how we as researchers should not be inputting our own biases into our artifact, but can use the research process as a method of participatory design to uplift multiple perspectives of Wellesley first years, rather than prescribing our own beliefs.
+Throughout the process, we have been especially cognizant of our positionality in regards to the Wellesley first year community. Though as Wellesley students ourselves we have a lot in common with the first year students at this institution, we, as upperclassmen, are ultimately <strong><em> not </strong></em> a part of their internal community. To grapple with this, we have been keeping in mind the principles of 
+data feminism <a href="#ref-dataFeminism" class="citation-link" id="cite-dataFeminism">[1]</a>, most notably, embracing pluralism, and how we as researchers should not be inputting our own biases into our artifact, but can use the research process as a method of participatory design to uplift multiple perspectives of Wellesley first years, rather than prescribing our own beliefs.
 </p>
 
 <p>
-Though GenAI is accepted with open arms by Wellesley first years, our Study Buddy chatbot does have potential for positive impacts on this community. In our user study, we were able to see patterns of increased belief in effective study strategies and decreased belief in ineffective ones. One participant even said,
+Though GenAI is most definetly not accepted with open arms by Wellesley first years, our Study Buddy chatbot does have potential for positive impacts on this community. In our user study, we were able to see patterns of increased belief in effective study strategies and decreased belief in ineffective ones. One participant even said,
 </p>
 
 <div class="blueQuote">
@@ -160,7 +162,7 @@ Though GenAI is accepted with open arms by Wellesley first years, our Study Budd
 </div>
 
 <p>
-Moving forward, we’re left grappling with the question of, is Study Buddy’s potential for positive impacts worth the tradeoff with its negative impacts? And, as researchers removed from the community we are designing for, is it up to us to decide?
+As we move forward, we’re left grappling with the question of, is Study Buddy’s potential for positive impacts worth the tradeoff with its negative impacts? And, as researchers with a degree of separation from the community we are designing for, is it up to us to decide?
 </p>
 
       </div>
@@ -171,29 +173,49 @@ Moving forward, we’re left grappling with the question of, is Study Buddy’s 
       <div class="card-body clearfix">
         <h2>Building the Gem</h2>
 
-        <span id="cite-dimock1986" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-sagiv2010" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-moreau2005" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-kern2006" class="citation-anchor" aria-hidden="true"></span>
-        <span id="cite-stokes2006" class="citation-anchor" aria-hidden="true"></span>
-
        <h3>Guiding Principles</h3>
+
+        <p>The principles that guided the creation of our gem are as follows: </p>
+
+        <ul>
+          <li><span class="liIntro" >Transparency</span><br>
+          The primary principle that guided our gem development was transparency. This involved being open and honest about the limitations of the gem, such as its limited scope and its potential for hallucinations. Not only were we transparent about the gem itself, but the work behind it, as our participants received thorough documentation on how we created the gem. This domain of transparency and making labor visible was informed by the principles of data feminism.
+          <a class="citation-link" href="#ref-dataFeminism">[1]</a>
+
+          <div class="citation-block">
+            "The work of data science, like all work in the world, is the work of
+many hands. Data feminism makes this labor visible so that it can be
+recognized and valued."
+          </div>
+        
+        </li>
+          <li><span class="liIntro" >Accuracy</span><br>We</li>
+          <li><span class="liIntro" >Interactivity</span><br></li>
+
+          We set out to ensure our gem was taking full advantage of the affordances of AI, one of those affordances being interactivity. We didn’t want engagement with our gem to feel similar to engagement with a static website, or even a google search that just simply provides paragraphs and paragraphs of information. One method we approached interactivity with was by creating a new mode of interaction through a text-based game. Users were made aware of such a possibility, and if they requested, could participate in a game of true or false, where they could test their knowledge of whether study strategies were actually effective or not. This methodology was utilized to not only make the gem more engaging, but also to make the knowledge more digestible by using elements of the effective study strategies we researched, having users participate in the beneficial habits of active recall, which has shown effectiveness within learning in general <a href="#ref-13" class="citation-link" id="cite-13">[13]</a> and especially within edutainment <a href="#ref-14" class="citation-link" id="cite-14">[14]</a>, rather than just reading and re-reading, which has been proven to be ineffective for long-term learning when used in isolation <a href="#ref-10" class="citation-link" id="cite-10">[10, 11, 12]</a>.
+
+
+          
+        </ul>
+
+       
        <h3>The Knowledge Base</h3>
 
               <!-- journal-style list -->
        <div class="journal-grid" aria-hidden="false">
-         <article class="journal-card"> <div class="journal-name" ><a href="https://www.apa.org/pubs/journals/edu">Journal of Educational Psychology</a></div> </article>
-         <article class="journal-card"> <div class="journal-name"><a href="https://link.springer.com/journal/10648">Educational Psychology Review</a></div> </article>
-         <article class="journal-card"> <div class="journal-name"><a href="https://www.apa.org/pubs/journals/xlm">Journal of Experimental Psychology: Learning, Memory, and Cognition</a></div> </article>
-         <article class="journal-card"> <div class="journal-name"><a href="https://link.springer.com/journal/11409">Metacognition and Learning</a></div> </article>
-         <article class="journal-card"> <div class="journal-name"><a href="https://www.sciencedirect.com/journal/learning-and-individual-differences">Learning and Individual Differences</a></div> </article>
-         <article class="journal-card"> <div class="journal-name"><a href="https://www.tandfonline.com/journals/hlns20">Journal of the Learning Sciences (JLS)</a></div> </article>
-         <article class="journal-card"> <div class="journal-name"><a href="https://www.aera.net/Publications/Journals/American-Educational-Research-Journal">American Educational Research Journal</a></div> </article>
+         <article class="journal-card"> <div class="journal-name" ><a href="#ref-jep" class="citation-link" id="cite-jep">Journal of Educational Psychology</a></div> </article>
+         <article class="journal-card"> <div class="journal-name"><a href="#ref-epr" class="citation-link" id="cite-epr">Educational Psychology Review</a></div> </article>
+         <article class="journal-card"> <div class="journal-name"><a href="#ref-jep-lmc" class="citation-link" id="cite-jep-lmc">Journal of Experimental Psychology: Learning, Memory, and Cognition</a></div> </article>
+         <article class="journal-card"> <div class="journal-name"><a href="#ref-metacog" class="citation-link" id="cite-metacog">Metacognition and Learning</a></div> </article>
+         <article class="journal-card"> <div class="journal-name"><a href="#ref-lid" class="citation-link" id="cite-lid">Learning and Individual Differences</a></div> </article>
+         <article class="journal-card"> <div class="journal-name"><a href="#ref-jls" class="citation-link" id="cite-jls">Journal of the Learning Sciences (JLS)</a></div> </article>
+         <article class="journal-card"> <div class="journal-name"><a href="#ref-aerj" class="citation-link" id="cite-aerj">American Educational Research Journal</a></div> </article>
        </div>
-       
-       <h3>The Iterative Process</h3>
-                <div class="container">
-          <h4>Three Components of Effective Study Strategy</h4>
+       <br>
+     <h4>Three Components of Effective Study Strategy</h4>
+
+       <p>As we set out to find resources that could inform about effective study strategies, we had to define what an effective study strategy <em><strong>actually</strong></em> is. As we combed through articles, papers, and resources while building our knowledge base, we identified three key components of an effective study strategy:</p>
+       <br>
 
           <div class="grid">
             <!-- Card 1 -->
@@ -240,10 +262,17 @@ Moving forward, we’re left grappling with the question of, is Study Buddy’s 
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>    
+          
+          <h3>The Iterative Process</h3>
+                <div class="container">
+     
 
       </div>
+        </div>
+
+
+   
     </section>
 
     <!-- SECTION 4: Testing and Refinement -->
@@ -339,7 +368,11 @@ To track belief change, we asked participants to rate five statements about stud
 The slope charts below show how each individual’s beliefs changed over time.
 </p>
 
-<h5>Increased Belief in Effective Study Strategies</h5>
+<h5>
+  <span class="material-symbols-outlined">
+  trending_up
+  </span>
+  Increased Belief in Effective Study Strategies</h5>
 
 <div id="chart-slope-q1" class="viz"></div>
 <div id="chart-slope-q3" class="viz"></div>
@@ -351,7 +384,11 @@ For Question 1 in the post-survey, most participants showed an increase after us
 Question 3 showed a pretty similar pattern. Overall, the chatbot mainly strengthened participants’ beliefs in evidence-based strategies.
 </p>
 
-<h5>Decreased Belief in Ineffective Strategies</h5>
+<h5>
+  <span class="material-symbols-outlined">
+trending_down
+</span>
+  Decreased Belief in Ineffective Strategies</h5>
 
 <div id="chart-slope-q2" class="viz"></div>
 <div id="chart-slope-q5" class="viz"></div>
@@ -363,7 +400,11 @@ Questions 2 and 5 evaluated changes in beliefs about ineffective study strategie
 Question 5, which refers to rereading notes, showed a decrease in belief from most participants. Our bot was decently effective at debunking common ineffective study strategies.
 </p>
 
-<h5>Differing Belief Changes in Effective Study Strategies</h5>
+<h5>
+  <span class="material-symbols-outlined">
+arrow_split
+</span>
+  Differing Belief Changes in Effective Study Strategies</h5>
 
 **<div id="chart-slope-q4" class="viz"></div>**
 <p>
@@ -396,32 +437,47 @@ Engagement was clearly the weakest area. The “Engaging/Interactive” item was
 To better understand how students made sense of Study Buddy, we closely analyzed open-ended responses and screenshots and conducted multiple rounds of thematic coding. Six main themes emerged.
 </p>
 
-<h5>Efficiency</h5>
+<h5>
+  <span class="material-symbols-outlined">
+hourglass_check
+</span>
+  Efficiency</h5>
 <p>
 Many first-years emphasized that they value tools that save time and get straight to the point. Several users also appreciated how concise the chatbot’s responses were.
 </p>
 
-<h5>Source Validity and Trust</h5>
+<h5>
+  <span class="material-symbols-outlined">
+verified
+</span>
+  Helpfulness for First-Years</h5>
 <p>
-Students frequently mentioned that citations increased their trust in the bot. Restricting sources to specific cognitive and learning sciences journals made the information feel more trustworthy and credible.
+Several students liked how Study Buddy paired them with Wellesley-specific PLTC resources <a href="#ref-pltc" class="citation-link" id="cite-pltc">[9]</a>.
 </p>
 
-<h5>Helpfulness for First-Years</h5>
-<p>
-Several students liked how Study Buddy paired them with Wellesley-specific PLTC resources.
-</p>
-
-<h5>Awareness Versus Action</h5>
+<h5>
+  <span class="material-symbols-outlined">
+campaign
+</span>
+  Awareness Vs. Action</h5>
 <p>
 One of the most important themes was the gap between knowing what works and actually doing it. Many students noted that they were already aware that certain study myths were false but still struggled to change their behavior. This highlights a key limitation of the current version of Study Buddy: it explains strategies well but does not help students follow through on them.
 </p>
 
-<h5>Is a Chatbot the Right Tool?</h5>
+<h5>
+  <span class="material-symbols-outlined">
+robot_2
+</span>
+  Is a Chatbot the Right Tool?</h5>
 <p>
 A smaller group raised broader concerns about using AI, including ethical and environmental considerations.
 </p>
 
-<h5>Logistical and Interaction Improvements</h5>
+<h5>
+  <span class="material-symbols-outlined">
+touchpad_mouse
+</span>
+  Logistical and Interaction Improvements</h5>
 <p>
 Finally, students offered specific logistical suggestions, such as making citations clickable and reducing how often the True/False game was prompted.
 </p>
@@ -482,18 +538,139 @@ Finally, although our strict constraints succeeded in keeping the bot accurate a
         <h2>References</h2>
         <ol class="references" style="margin-top: .75rem; padding-left: 1.15rem;">
       
-         <li id="dataFeminismCitation" class="citation">
+         <li id="ref-dataFeminism" class="citation">
           <span class="reference-number">1.</span>
           Klein, L., & D’Ignazio, C. (2024). <em>Data Feminism for AI</em>. In *The 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT ’24)*, June 03–06, 2024, Rio de Janeiro, Brazil. ACM. DOI: <a href="https://doi.org/10.1145/3630106.3658543" target="_blank" rel="noopener noreferrer">10.1145/3630106.3658543</a>. Available: <a href="https://facctconference.org/static/papers24/facct24-7.pdf" target="_blank" rel="noopener noreferrer">https://facctconference.org/static/papers24/facct24-7.pdf</a>.
-          <a class="back-link" href="#evidence" aria-label="Back to section">↩</a>
+          <a class="back-link" href="#cite-dataFeminism" aria-label="Back to section">↩</a>
+        </li>
+
+        <li id="ref-jep" class="citation">
+  <span class="reference-number">2.</span>
+  American Psychological Association. (n.d.). <em>Journal of Educational Psychology</em>. APA Publishing. Available: 
+  <a href="https://www.apa.org/pubs/journals/edu" target="_blank" rel="noopener noreferrer">
+    https://www.apa.org/pubs/journals/edu
+  </a>.
+  <a class="back-link" href="#cite-jep" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-epr" class="citation">
+  <span class="reference-number">3.</span>
+  Springer. (n.d.). <em>Educational Psychology Review</em>. Springer Nature. Available:
+  <a href="https://link.springer.com/journal/10648" target="_blank" rel="noopener noreferrer">
+    https://link.springer.com/journal/10648
+  </a>.
+  <a class="back-link" href="#cite-epr" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-jep-lmc" class="citation">
+  <span class="reference-number">4.</span>
+  American Psychological Association. (n.d.). <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>. APA Publishing. Available:
+  <a href="https://www.apa.org/pubs/journals/xlm" target="_blank" rel="noopener noreferrer">
+    https://www.apa.org/pubs/journals/xlm
+  </a>.
+  <a class="back-link" href="#cite-jep-lmc" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-metacog" class="citation">
+  <span class="reference-number">5.</span>
+  Springer. (n.d.). <em>Metacognition and Learning</em>. Springer Nature. Available:
+  <a href="https://link.springer.com/journal/11409" target="_blank" rel="noopener noreferrer">
+    https://link.springer.com/journal/11409
+  </a>.
+  <a class="back-link" href="#cite-metacog" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-lid" class="citation">
+  <span class="reference-number">6.</span>
+  Elsevier. (n.d.). <em>Learning and Individual Differences</em>. Elsevier. Available:
+  <a href="https://www.sciencedirect.com/journal/learning-and-individual-differences" target="_blank" rel="noopener noreferrer">
+    https://www.sciencedirect.com/journal/learning-and-individual-differences
+  </a>.
+  <a class="back-link" href="#cite-lid" aria-label="Back to section">↩</a>
+</li>
+
+       <li id="ref-jls" class="citation">
+  <span class="reference-number">7.</span>
+  Taylor & Francis. (n.d.). <em>Journal of the Learning Sciences</em>. Taylor & Francis Online. Available:
+  <a href="https://www.tandfonline.com/journals/hlns20" target="_blank" rel="noopener noreferrer">
+    https://www.tandfonline.com/journals/hlns20
+  </a>.
+  <a class="back-link" href="#cite-jls" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-aerj" class="citation">
+  <span class="reference-number">8.</span>
+  American Educational Research Association. (n.d.). <em>American Educational Research Journal</em>. AERA. Available:
+  <a href="https://www.aera.net/Publications/Journals/American-Educational-Research-Journal" target="_blank" rel="noopener noreferrer">
+    https://www.aera.net/Publications/Journals/American-Educational-Research-Journal
+  </a>.
+  <a class="back-link" href="#cite-aerj" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-pltc" class="citation">
+  <span class="reference-number">9.</span>
+  Wellesley College. (n.d.). <em>Pforzheimer Learning and Teaching Center</em>. Available:
+  <a href="https://intranet.wellesley.edu/administrative/pforzheimer-learning-and-teaching-center" target="_blank" rel="noopener noreferrer">
+    https://intranet.wellesley.edu/administrative/pforzheimer-learning-and-teaching-center
+  </a>.
+  <a class="back-link" href="#cite-pltc" aria-label="Back to section">↩</a>
+</li>
+
+      <li id="ref-10" class="citation">
+  <span class="reference-number">10.</span>
+  Callender, A.A., & McDaniel, M.A. (2009). *The limited benefits of rereading educational texts*. Contemporary Educational Psychology. Available: https://www.sciencedirect.com/science/article/abs/pii/S0361476X08000477
+  <a class="back-link" href="#cite-10" aria-label="Back to section">↩</a>
+</li>
+
+<li class="citation">
+  <span class="reference-number">11.</span>
+  Phillips, N. E., Mills, C., D’Mello, S., & Risko, E. F. (2016). <em>On the influence of re-reading on mind wandering</em>. Quarterly Journal of Experimental Psychology. https://journals.sagepub.com/doi/full/10.1080/17470218.2015.1107109
+  <a class="back-link" href="#cite-10" aria-label="Back to section">↩</a>
+</li>
+
+<li class="citation">
+  <span class="reference-number">12.</span>
+  Simone, P., Whitfield, L., Bell, M., Escobar, C., Whitehouse, A., & Vargas, S. (2024). <em>The surprising effectiveness of re-reading as a study strategy</em>. ICERI2024 Proceedings. https://library.iated.org/view/SIMONE2024SUR
+  <a class="back-link" href="#cite-10" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-13" class="citation">
+  <span class="reference-number">13.</span>
+  Jayaram, S. (2026). <em>Spaced repetition and active recall improves academic performance and long-term retention</em>. Available: https://www.sciencedirect.com/science/article/abs/pii/S187712972500231X 
+  <a class="back-link" href="#cite-13" aria-label="Back to section">↩</a>
+</li>
+
+<li id="ref-14" class="citation">
+  <span class="reference-number">14.</span>
+  Xu, J., Wu, A., Filip, C., Patel, Z., Bernstein, S. R., Tanveer, R., Syed, H., & Kotroczo, T. (2024). <em>Active recall strategies associated with academic achievement in young adults: A systematic review</em>. Journal of Affective Disorders. https://www.sciencedirect.com/science/article/abs/pii/S0165032724004245
+  <a class="back-link" href="#cite-14" aria-label="Back to section">↩</a>
+</li>
+
+        <li id="ref-15" class="citation">
+          <span class="reference-number">15.</span>
+          Costanza-Chock, S. (2020). <em>Design Justice: Community-led practices for equitable design</em>. Available:
+          <a href="https://jods.mitpress.mit.edu/pub/costanza-chock/release/4" target="_blank" rel="noopener noreferrer">
+            https://jods.mitpress.mit.edu/pub/costanza-chock/release/4
+          </a>.
+          <a class="back-link" href="#cite-costanza" aria-label="Back to section">↩</a>
+        </li>
+
+        <li id="ref-16" class="citation">
+          <span class="reference-number">16.</span>
+          Lewandowsky, S., Ecker, U. K. H., & Cook, J. (2020). <em>The Debunking Handbook 2020</em>. Available:
+          <a href="DebunkingHandbook2020.pdf" target="_blank" rel="noopener noreferrer">
+            DebunkingHandbook2020.pdf
+          </a>.
+          <a class="back-link" href="#cite-debunk" aria-label="Back to section">↩</a>
         </li>
 
 
-
-       
         </ol>
       </div>
     </section>
+<footer class="footer" style="padding:1.25rem; text-align:center; color:var(--muted);">
+      <small>Website designed by Rebecca Friedman and Farangiz Akhadova with the help of <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="footLink">Claude Sonnet 4.5</a> and <a href="https://chatgpt.com/" target="_blank" class="footLink" rel="noopener noreferrer">ChatGPT 5.1</a>.</small>
+    </footer>
 
     <script>
 document.addEventListener('DOMContentLoaded', () => {

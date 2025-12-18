@@ -115,15 +115,15 @@
       }
 
       .citation-link {
-        color: var(--secondary); 
-        text-decoration: underline;
+        color: var(--primary); 
+        text-decoration: none;
         font-weight: 400;
         font-style: normal;
         padding: 1px 3px;
         border-radius: 4px;
         opacity: 0.92;
       }
-      .citation-link:hover { background: #f8f2f2; color: #7f1d1d; }
+      .citation-link:hover { background: var(--accentLight); color: var(--accentDark); }
 
       .section + .section { margin-top:1.75rem; }
 
@@ -135,7 +135,7 @@
         font-size: 0.92rem;
         margin-left: 0.5rem;
         text-decoration: none;
-        color: #6b7280;
+        color: var(--primary);
         font-weight: 500;
         opacity: 0.9;
       }
@@ -605,4 +605,34 @@ a {
 
         font-style: italic;
         font-size: 1.15rem;  
+}
+
+.material-symbols-outlined{
+  font-size: 1.5rem;
+  vertical-align: middle;
+  color: var(--accentMed);
+}
+
+.liIntro {
+  font-weight: 700;
+  margin-right: 0.25rem;
+  color: var(--primary);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.footLink {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.footLink:hover {
+  color: var(--primary);
+  background-color: var(--secondary) ;
+  border-radius: 5px;
+  text-decoration: underline;
+  font-weight: 600;
 }
